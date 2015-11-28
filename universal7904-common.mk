@@ -41,7 +41,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service
+    android.hardware.camera.provider@2.5-service \
+    camera.universal7904
 
 # DRM
 PRODUCT_PACKAGES += \

@@ -25,7 +25,7 @@ function blob_fixup {
 	vendor/lib*/libhifills.so)
 		grep -q libunwindstack.so "$2" || "$PATCHELF" --add-needed "libunwindstack.so" "$2"
 		;;
-	vendor/lib*/hw/camera.exynos7904.so)
+	vendor/lib*/hw/camera.vendor.exynos7904.so)
 		"$PATCHELF" --replace-needed "libcamera_client.so" "libcamera_metadata_helper.so" "$2"
 		"$PATCHELF" --replace-needed "libgui.so" "libgui_vendor.so" "$2"
 		;;

@@ -7,8 +7,6 @@ on init
     write /proc/sys/vm/swappiness 100
 
 on fs
-    swapon_all /system/etc/fstab.enableswap
-
     write /dev/blkio/background/blkio.weight 500
 
     # MirrorLink permission
@@ -790,8 +788,8 @@ on boot
     chown system mtp /dev/usb_mtp_gadget
     mkdir /dev/socket/mtp 0770 system mtp
 
-# Pageboostd
 on property:sys.boot_completed=1
+    swapon_all /system/etc/fstab.enableswap
     mkdir /data/misc/pageboost 0771 system system
 
 # GPU DVFS

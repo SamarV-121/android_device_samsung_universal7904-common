@@ -78,7 +78,7 @@ static int check_vendor_module()
 
 static char * camera2_fixup_getparams(int id __unused, const char * settings)
 {
-    android::CameraParameters params;
+    CameraParameters params;
     params.unflatten(android::String8(settings));
 
 #ifdef LOG_PARAMETERS
@@ -101,7 +101,7 @@ static char * camera2_fixup_getparams(int id __unused, const char * settings)
 
 static char * camera2_fixup_setparams(int id __unused, const char * settings)
 {
-    android::CameraParameters params;
+    CameraParameters params;
     params.unflatten(android::String8(settings));
 
 #ifdef LOG_PARAMETERS

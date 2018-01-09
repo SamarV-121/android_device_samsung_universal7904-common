@@ -18,7 +18,10 @@
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
 #include <camera/Camera.h>
-#include <camera/CameraParameters.h>
+#include <CameraParameters.h>
+
+using ::android::hardware::camera::common::V1_0::helper::CameraParameters;
+using ::android::hardware::camera::common::V1_0::helper::Size;
 
 static android::Mutex gCameraWrapperLock;
 

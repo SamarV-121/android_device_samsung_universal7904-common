@@ -198,7 +198,8 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libcamera_metadata_helper \
-    libshim_sensorndkbridge
+    libshim_sensorndkbridge \
+    libstagefright_shim
 
 # Skip Mount
 PRODUCT_COPY_FILES += \

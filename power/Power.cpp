@@ -96,6 +96,8 @@ out:
         set(interactivePath + "/io_is_busy", interactive ? "1" : "0");
     }
 
+    set("/sys/power/cpuhotplug/max_online_cpu", interactive ? "8" : "6");
+
     setProfile(interactive ? PowerProfile::POWER_SAVE : PowerProfile::BALANCED);
 
     return Void();

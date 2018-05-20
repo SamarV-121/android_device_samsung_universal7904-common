@@ -1,3 +1,7 @@
+on init
+    # Disable vendor overlay
+    mount none /vendor/lost+found /vendor/overlay bind
+
 on fs
 
     write /dev/blkio/background/blkio.weight 500
@@ -787,3 +791,15 @@ on property:sys.boot_completed=1
     chmod 0644 /sys/kernel/gpu/gpu_governor
     chmod 0644 /sys/kernel/gpu/gpu_max_clock
     chmod 0644 /sys/kernel/gpu/gpu_min_clock 
+
+service argos-daemon /system/bin/true
+    oneshot
+    disabled
+
+service ExynosHWCServiceTW /system/bin/true
+    oneshot
+    disabled
+
+service vaultkeeper /system/bin/true
+    oneshot
+    disabled

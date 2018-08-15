@@ -105,6 +105,9 @@ on post-fs-data
     # mldap
     mkdir /efs/prov_data 0770 radio system
 
+    # Allow writing to the kernel trace log.
+    chmod 0222 /sys/kernel/debug/tracing/trace_marker
+
 on boot
 
     write /proc/sys/vm/dirty_expire_centisecs 200

@@ -36,9 +36,6 @@ BUILD_BROKEN_DUP_RULES := true
 # Camera
 TARGET_CAMERA_BOOTTIME_TIMESTAMP := true
 
-# Enable 64-bits binder
-TARGET_USES_64_BIT_BINDER := true
-
 # Enable stats logging in LMKD
 TARGET_LMKD_STATS_LOG := true
 

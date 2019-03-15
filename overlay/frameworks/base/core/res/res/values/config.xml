@@ -46,4 +46,5 @@
     <string name="db_wal_sync_mode" translatable="false">OFF</string>
     <bool name="config_suspendWhenScreenOffDueToProximity">true</bool>
     <bool name="config_showNavigationBar">true</bool>	
+    <bool name="config_zramWriteback">true</bool>
 </resources>

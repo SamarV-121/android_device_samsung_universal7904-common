@@ -1,2 +1,5 @@
 # Bluetooth (aptX)
 lib64/libaptX_encoder.so
+
+# CP Boot Daemon
+-sbin/cbd;rootfs

@@ -54,6 +54,11 @@ on fs
 on fs
     setprop ro.crypto.fde_algorithm AES-256-XTS-DISK
 
+on late-fs
+    write /sys/block/sda/queue/iostats 0
+    write /sys/block/sda/queue/read_ahead_kb 2048
+    write /sys/block/sda/queue/nr_requests 256
+
 on post-fs-data
     # USB conn_gadget device (DeXonPC, Samsung Flow)
     chown system system /dev/android_ssusbcon
@@ -797,7 +802,11 @@ on property:sys.boot_completed=1
     chown system system /sys/kernel/gpu/gpu_min_clock
     chmod 0644 /sys/kernel/gpu/gpu_governor
     chmod 0644 /sys/kernel/gpu/gpu_max_clock
-    chmod 0644 /sys/kernel/gpu/gpu_min_clock 
+    chmod 0644 /sys/kernel/gpu/gpu_min_clock
+
+    write /sys/block/sda/queue/iostats 1
+    write /sys/block/sda/queue/read_ahead_kb 256
+    write /sys/block/sda/queue/nr_requests 128
 
 service argos-daemon /system/bin/true
     oneshot

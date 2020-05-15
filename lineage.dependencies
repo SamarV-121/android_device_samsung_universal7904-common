@@ -12,6 +12,10 @@
         "target_path": "hardware/samsung/nfc"
     },
     {
+        "repository": "android_hardware_samsung_slsi_fm",
+        "target_path": "hardware/samsung_slsi/fm"
+    },
+    {
         "repository": "android_hardware_samsung_slsi_libbt",
         "target_path": "hardware/samsung_slsi/libbt"
     },

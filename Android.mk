@@ -7,71 +7,21 @@ ifneq ($(filter m20lte m30lte a40 a30, $(TARGET_DEVICE)),)
 
 include $(CLEAR_VARS)
 
-LIBGLES_MALI_LIBRARY := /vendor/lib/egl/libGLES_mali.so
-LIBGLES_MALI64_LIBRARY := /vendor/lib64/egl/libGLES_mali.so
+EGL_LIBS := libGLES_mali.so libOpenCL.so libOpenCL.so.1 libOpenCL.so.1.1 hw/vulkan.$(TARGET_BOARD_PLATFORM).so
 
-VULKAN_SYMLINK := $(TARGET_OUT_VENDOR)/lib/hw/vulkan.universal7904.so
-$(VULKAN_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib/hw/vulkan.universal7904.so symlink: $@"
+EGL_32_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/lib/,$(EGL_LIBS))
+$(EGL_32_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "EGL 32 lib link: $@"
 	@mkdir -p $(dir $@)
-	$(hide) ln -sf $(LIBGLES_MALI_LIBRARY) $@
+	@rm -rf $@
+	$(hide) ln -sf /vendor/lib/egl/libGLES_mali.so $@
 
-VULKAN64_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/hw/vulkan.universal7904.so
-$(VULKAN64_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib64/hw/vulkan.universal7904.so symlink: $@"
+EGL_64_SYMLINKS := $(addprefix $(TARGET_OUT_VENDOR)/lib64/,$(EGL_LIBS))
+$(EGL_64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "EGL 64 lib link: $@"
 	@mkdir -p $(dir $@)
-	$(hide) ln -sf $(LIBGLES_MALI64_LIBRARY) $@
+	@rm -rf $@
+	$(hide) ln -sf /vendor/lib64/egl/libGLES_mali.so $@
 
-ALL_DEFAULT_INSTALLED_MODULES += \
-	$(VULKAN_SYMLINK) \
-	$(VULKAN64_SYMLINK)
-
-include $(CLEAR_VARS)
-
-LIBGLES_MALI_LIBRARY := /vendor/lib/egl/libGLES_mali.so
-LIBGLES_MALI64_LIBRARY := /vendor/lib64/egl/libGLES_mali.so
-
-LIBOPENCL_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libOpenCL.so
-$(LIBOPENCL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib/libOpenCL.so symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf libOpenCL.so.1 $@
-
-LIBOPENCL64_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libOpenCL.so
-$(LIBOPENCL64_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib64/libOpenCL.so symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf libOpenCL.so.1 $@
-
-LIBOPENCL1_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libOpenCL.so.1
-$(LIBOPENCL1_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib/libOpenCL.so.1 symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf libOpenCL.so.1.1 $@
-
-LIBOPENCL641_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libOpenCL.so.1
-$(LIBOPENCL641_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib64/libOpenCL.so.1 symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf libOpenCL.so.1.1 $@
-
-LIBOPENCL11_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libOpenCL.so.1.1
-$(LIBOPENCL11_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib/libOpenCL.so.1.1 symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf $(LIBGLES_MALI_LIBRARY) $@
-
-LIBOPENCL6411_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libOpenCL.so.1.1
-$(LIBOPENCL6411_SYMLINK): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating lib64/libOpenCL.so.1.1 symlink: $@"
-	@mkdir -p $(dir $@)
-	$(hide) ln -sf $(LIBGLES_MALI64_LIBRARY) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += \
-	$(LIBOPENCL_SYMLINK) \
-	$(LIBOPENCL64_SYMLINK) \
-	$(LIBOPENCL1_SYMLINK) \
-	$(LIBOPENCL641_SYMLINK) \
-	$(LIBOPENCL11_SYMLINK) \
-	$(LIBOPENCL6411_SYMLINK)
+ALL_DEFAULT_INSTALLED_MODULES += $(EGL_32_SYMLINKS) $(EGL_64_SYMLINKS)
 endif

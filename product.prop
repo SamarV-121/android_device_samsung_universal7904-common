@@ -9,3 +9,6 @@ ro.lmk.kill_heaviest_task=false
 ro.lmk.log_stats=true
 ro.lmk.upgrade_pressure=40
 ro.lmk.use_psi=false
+
+# Set the sample rate for the BT device
+bluetooth.samsung_samplerate.supported=true

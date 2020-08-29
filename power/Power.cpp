@@ -96,6 +96,8 @@ out:
         set(interactivePath + "/io_is_busy", interactive ? "1" : "0");
     }
 
+    setProfile(interactive ? PowerProfile::POWER_SAVE : PowerProfile::BALANCED);
+
     return Void();
 }
 

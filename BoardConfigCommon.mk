@@ -31,6 +31,9 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 # Enable 64-bits binder
 TARGET_USES_64_BIT_BINDER := true
 
+# Enable stats logging in LMKD
+TARGET_LMKD_STATS_LOG := true
+
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true

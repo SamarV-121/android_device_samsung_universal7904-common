@@ -1,0 +1,33 @@
+on early-fs
+    setprop sys.usb.configfs 1
+    setprop sys.usb.controller 13600000.dwc3
+    symlink /system/bin /sbin
+
+on fs
+    wait /dev/block/platform/13500000.dwmmc0
+    symlink /dev/block/platform/13500000.dwmmc0 /dev/block/bootdevice
+
+on post-fs
+    write /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration "Conf 1"
+    chmod 0444 /config/usb_gadget/g1/configs/b.1/strings/0x409/configuration
+
+on property:sys.usb.ffs.ready=0 && property:sys.usb.config=none
+    write /sys/class/android_usb/android0/enable 0
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=sideload
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions adb
+    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+    write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=adb
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions adb
+    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+    write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.ffs.ready=1 && property:sys.usb.config=fastboot
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions fastboot
+    write /config/usb_gadget/g1/UDC ${sys.usb.controller}
+    write /sys/class/android_usb/android0/enable 1

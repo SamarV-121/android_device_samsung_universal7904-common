@@ -20,6 +20,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Init scripts
 PRODUCT_PACKAGES += \
     init.target.rc \
+    init.usb_accessory.rc \
     fstab.enableswap
 
 # Net

@@ -1,2 +1,20 @@
+# Audio
+lib/hw/audio.playback_record.default.so
+lib/libHMT.so
+lib/lib_SoundAlive_3DPosition_ver202.so
+lib/lib_SoundAlive_AlbumArt_ver105.so
+lib/lib_SoundAlive_play_plus_ver210.so
+lib/lib_SoundBooster_ver950.so
+lib/libprofileparamstorage.so
+lib/libsecaudiocoreutils.so
+lib64/hw/audio.playback_record.default.so
+lib64/libHMT.so
+lib64/lib_SoundAlive_3DPosition_ver202.so
+lib64/lib_SoundAlive_AlbumArt_ver105.so
+lib64/lib_SoundAlive_play_plus_ver210.so
+lib64/lib_SoundBooster_ver950.so
+lib64/libprofileparamstorage.so
+lib64/libsecaudiocoreutils.so
+
 # Bluetooth (aptX)
 lib64/libaptX_encoder.so

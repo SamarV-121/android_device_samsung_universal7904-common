@@ -794,6 +794,9 @@ on boot
 on property:sys.boot_completed=1
     mkdir /data/misc/pageboost 0771 system system
 
+    # ZRAM
+    rm /data/per_boot/zram_swap
+
 # GPU DVFS
     chown system system /sys/kernel/gpu/gpu_governor
     chown system system /sys/kernel/gpu/gpu_max_clock

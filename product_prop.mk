@@ -6,6 +6,17 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
+# Dex2oat
+PRODUCT_PRODUCT_PROPERTIES += \
+    dalvik.vm.image-dex2oat-filter=quicken \
+    dalvik.vm.image-dex2oat-threads=8 \
+    dalvik.vm.image-dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+    dalvik.vm.dex2oat-filter=quicken \
+    dalvik.vm.dex2oat-threads=8 \
+    dalvik.vm.dex2oat-cpu-set=0,1,2,3,4,5,6,7 \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.boot-dex2oat-cpu-set=0,1,2,3,4,5,6,7
+
 # fastbootd
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.fastbootd.available=true

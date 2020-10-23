@@ -1,0 +1,2 @@
+allow hal_health sysfs_health:file rw_file_perms;
+allow hal_health sysfs_health:dir r_dir_perms;

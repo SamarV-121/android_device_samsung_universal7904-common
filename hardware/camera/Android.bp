@@ -1,5 +1,6 @@
 cc_library_shared {
     name: "camera.exynos7904",
+    vendor: true,
     relative_install_path: "hw",
 
     srcs: [

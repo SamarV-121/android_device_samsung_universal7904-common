@@ -44,6 +44,10 @@ TARGET_SCREEN_WIDTH := 1080
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.5-service
 
+# ConfigStore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \

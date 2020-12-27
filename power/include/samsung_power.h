@@ -36,9 +36,6 @@ static const std::vector<std::string> cpuInteractivePaths = {
     "/sys/devices/system/cpu/cpu4/cpufreq/interactive"
 };
 
-/* double tap to wake node */
-//#define TAP_TO_WAKE_NODE "/sys/class/sec/tsp/dt2w_enable"
-
 /* interactive normal profile */
 #define INTERACTIVE_NORMAL_L_HISPEED_FREQ "858000"
 #define INTERACTIVE_NORMAL_L_GO_HISPEED_LOAD "85"

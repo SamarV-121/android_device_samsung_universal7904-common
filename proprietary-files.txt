@@ -182,10 +182,6 @@ vendor/etc/yas_set.cfg
 vendor/lib/libyasalgo.so
 vendor/lib64/libyasalgo.so
 
-# Thermal
-vendor/lib/hw/thermal.universal7904.so
-vendor/lib64/hw/thermal.universal7904.so
-
 # Wifi
 vendor/bin/hw/macloader
 vendor/bin/wlbtd

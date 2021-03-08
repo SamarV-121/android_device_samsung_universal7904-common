@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # Copyright (C) 2020 The LineageOS Project
 
-LOCAL_PATH := hardware/samsung/hidl/1.0/sensors
+LOCAL_PATH := hardware/samsung/hidl/sensors/1.0
 
 include $(CLEAR_VARS)
 

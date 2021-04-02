@@ -3,7 +3,6 @@ on early-init
     mkdir /mnt/vendor/efs 0771 radio system
     mkdir /mnt/vendor/cpefs 0771 radio system
     mkdir /mnt/vendor/persist 0771 system system
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 on init
     start watchdogd
@@ -39,9 +38,6 @@ on late-fs
 #    start mobicore
 
 on post-fs
-    # Allow writing to the kernel trace log.
-    chmod 0222 /sys/kernel/debug/tracing/trace_marker
-
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
 
@@ -108,7 +104,6 @@ on post-fs-data
     chmod 0440 /sys/class/nxp/tfa_log/count_overtmax
 
 # Change permission for A-Box firmware logs file & GPR dump
-    chown audioserver system /sys/kernel/debug/abox/log-00
     chown audioserver system /sys/devices/platform/14a50000.abox/14a50000.abox:abox_debug@0/gpr
     chown audioserver system /sys/devices/platform/14a50000.abox/14a50000.abox:abox_debug@0/calliope_sram
     chown audioserver system /sys/devices/platform/14a50000.abox/14a50000.abox:abox_debug@0/calliope_dram
@@ -196,9 +191,6 @@ on post-fs-data
     chown system system /sys/devices/svc/Camera/SVC_rear_module
     chown system system /sys/devices/svc/Camera/SVC_front_module
 
-    chmod 0755 /sys/kernel/debug/tracing
-    restorecon /sys/kernel/debug/tracing/trace_marker
-
 # Permission for flashlight control for HAL3.3
 # The Istor espresso board does not have the flash led h/w, So the below permission line are blocked.
 # If you want to test the flashlight in board which have the flash led h/w, Enable the below blocked lines.
@@ -269,17 +261,9 @@ on boot
 
 	setprop wifi.interface wlan0
 
-    # Allow to access debugfs for system:system
-    chmod 0755 /sys/kernel/debug
-    chown system system /sys/kernel/debug
-
 	# Set permissions for ttysac2
 	chown system system /dev/ttySAC2
 	chmod 0660 /dev/ttySAC2
-
-    # Set up kernel tracing, but disable it by default
-    chmod 0222 /sys/kernel/debug/tracing/trace_marker
-    write /sys/kernel/debug/tracing/tracing_on 0
 
     # DVFS & Hotplug
     chown system system /sys/power/cpuhotplug/enabled

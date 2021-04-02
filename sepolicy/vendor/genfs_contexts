@@ -1,7 +1,3 @@
-genfscon debugfs /dma_buf                         u:object_r:debugfs_ion_dma:s0
-genfscon debugfs /ion/                            u:object_r:debugfs_ion:s0
-genfscon debugfs /mali/mem/                       u:object_r:debugfs_mali_mem:s0
-genfscon debugfs /mali/                           u:object_r:debugfs_mali:s0
 genfscon proc /sys/vm/swappiness                  u:object_r:proc_swapiness:s0
 genfscon sysfs /class/backlight/panel/brightness                                  u:object_r:sysfs_graphics:s0
 genfscon sysfs /class/backlight/panel/max_brightness                              u:object_r:sysfs_graphics:s0

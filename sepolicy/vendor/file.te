@@ -1,9 +1,3 @@
-# debugfs types
-type debugfs_mali, fs_type, debugfs_type;
-type debugfs_mali_mem, fs_type, debugfs_type;
-type debugfs_ion, fs_type, debugfs_type;
-type debugfs_ion_dma, fs_type, debugfs_type;
-
 # proc
 type proc_swapiness, fs_type, proc_type;
 

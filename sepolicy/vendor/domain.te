@@ -1,5 +1,1 @@
-r_dir_file(domain, debugfs_ion)
-r_dir_file(domain, debugfs_mali)
-r_dir_file(domain, debugfs_mali_mem)
-
 dontaudit domain efs_file:lnk_file r_file_perms;

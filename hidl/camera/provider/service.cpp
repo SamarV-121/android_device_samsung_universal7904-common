@@ -1,5 +1,6 @@
 /*
  * Copyright 2019 The Android Open Source Project
+ * Copyright 2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,11 +15,7 @@
  * limitations under the License.
  */
 
-#ifdef LAZY_SERVICE
-#define LOG_TAG "android.hardware.camera.provider@2.5-service-lazy"
-#else
-#define LOG_TAG "android.hardware.camera.provider@2.5-service"
-#endif
+#define LOG_TAG "android.hardware.camera.provider@2.5-service.samsung"
 
 #include <android/hardware/camera/provider/2.5/ICameraProvider.h>
 #include <binder/ProcessState.h>
@@ -26,16 +23,10 @@
 #include <hidl/HidlTransportSupport.h>
 
 #include "CameraProvider_2_5.h"
-#include "LegacyCameraProviderImpl_2_5.h"
+#include "SamsungCameraProvider.h"
 
 using android::status_t;
 using android::hardware::camera::provider::V2_5::ICameraProvider;
-
-#ifdef LAZY_SERVICE
-const bool kLazyService = true;
-#else
-const bool kLazyService = false;
-#endif
 
 int main()
 {
@@ -45,15 +36,9 @@ int main()
 
     ::android::hardware::configureRpcThreadpool(/*threads*/ HWBINDER_THREAD_COUNT, /*willJoin*/ true);
 
-    ::android::sp<ICameraProvider> provider = new CameraProvider<LegacyCameraProviderImpl_2_5>();
+    ::android::sp<ICameraProvider> provider = new CameraProvider<SamsungCameraProvider>();
 
-    status_t status;
-    if (kLazyService) {
-        auto serviceRegistrar = ::android::hardware::LazyServiceRegistrar::getInstance();
-        status = serviceRegistrar.registerService(provider, "legacy/0");
-    } else {
-        status = provider->registerAsService("legacy/0");
-    }
+    status_t status = provider->registerAsService("legacy/0");
     LOG_ALWAYS_FATAL_IF(status != android::OK, "Error while registering provider service: %d",
             status);
 

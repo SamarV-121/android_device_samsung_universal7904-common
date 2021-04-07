@@ -43,5 +43,5 @@
 ### VENDOR
 /(vendor|system/vendor)/bin/main_abox                       u:object_r:abox_exec:s0
 
-/(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@[0-9]\.[0-9]-service_64\.universal7904 u:object_r:hal_camera_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@[0-9]\.[0-9]-service\.universal7904 u:object_r:hal_camera_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.universal7904 u:object_r:hal_vibrator_default_exec:s0

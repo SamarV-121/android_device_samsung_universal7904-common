@@ -14,15 +14,16 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.camera.provider@2.5-service_64.universal7904",
+    name: "android.hardware.camera.provider@2.5-service.universal7904",
     defaults: ["hidl_defaults"],
+    compile_multilib: "32",
     proprietary: true,
     relative_install_path: "hw",
     srcs: [
         "SamsungCameraProvider.cpp",
         "service.cpp"
     ],
-    init_rc: ["android.hardware.camera.provider@2.5-service_64.universal7904.rc"],
+    init_rc: ["android.hardware.camera.provider@2.5-service.universal7904.rc"],
     shared_libs: [
         "android.hardware.camera.provider@2.4",
         "android.hardware.camera.provider@2.4-legacy",

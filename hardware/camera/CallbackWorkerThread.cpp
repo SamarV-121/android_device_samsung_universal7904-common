@@ -126,7 +126,7 @@ void CallbackWorkerThread::ClearCallbacks() {
     /* Lock the mutex and clear the message queue */
     std::unique_lock<std::mutex> lk(m_mutex);
 
-    ALOGV("%s: Clearing %i messages", __FUNCTION__, m_queue.size());
+    ALOGV("%s: Clearing %zu messages", __FUNCTION__, m_queue.size());
 
     /* Whilst the queue is not empty */
     while (!m_queue.empty()) {

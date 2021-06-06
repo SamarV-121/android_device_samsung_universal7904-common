@@ -57,7 +57,7 @@ static int check_vendor_module()
 
 static int camera3_initialize(const camera3_device_t *device, const camera3_callback_ops_t *callback_ops)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -68,7 +68,7 @@ static int camera3_initialize(const camera3_device_t *device, const camera3_call
 
 static int camera3_configure_streams(const camera3_device *device, camera3_stream_configuration_t *stream_list)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -77,9 +77,9 @@ static int camera3_configure_streams(const camera3_device *device, camera3_strea
     return VENDOR_CALL(device, configure_streams, stream_list);
 }
 
-static int camera3_register_stream_buffers(const camera3_device *device, const camera3_stream_buffer_set_t *buffer_set)
+__unused static int camera3_register_stream_buffers(const camera3_device *device, const camera3_stream_buffer_set_t *buffer_set)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -90,7 +90,7 @@ static int camera3_register_stream_buffers(const camera3_device *device, const c
 
 static const camera_metadata_t *camera3_construct_default_request_settings(const camera3_device_t *device, int type)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -101,7 +101,7 @@ static const camera_metadata_t *camera3_construct_default_request_settings(const
 
 static int camera3_process_capture_request(const camera3_device_t *device, camera3_capture_request_t *request)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -112,7 +112,7 @@ static int camera3_process_capture_request(const camera3_device_t *device, camer
 
 static void camera3_get_metadata_vendor_tag_ops(const camera3_device *device, vendor_tag_query_ops_t* ops)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -123,7 +123,7 @@ static void camera3_get_metadata_vendor_tag_ops(const camera3_device *device, ve
 
 static void camera3_dump(const camera3_device_t *device, int fd)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -134,7 +134,7 @@ static void camera3_dump(const camera3_device_t *device, int fd)
 
 static int camera3_flush(const camera3_device_t* device)
 {
-    ALOGV("%s->%08X->%08X", __FUNCTION__, (uintptr_t)device,
+    ALOGV("%s->%zu->%zu", __FUNCTION__, (uintptr_t)device,
         (uintptr_t)(((wrapper_camera3_device_t*)device)->vendor));
 
     if (!device)
@@ -220,7 +220,7 @@ int camera3_device_open(const hw_module_t *module, const char *name,
             ALOGE("vendor camera open fail");
             goto fail;
         }
-        ALOGV("%s: got vendor camera device 0x%08X", __FUNCTION__, (uintptr_t)(camera3_device->vendor));
+        ALOGV("%s: got vendor camera device 0x%zu", __FUNCTION__, (uintptr_t)(camera3_device->vendor));
 
         camera3_ops = (camera3_device_ops_t*)malloc(sizeof(*camera3_ops));
         if (!camera3_ops) {

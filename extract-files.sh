@@ -36,6 +36,9 @@ function blob_fixup {
 	vendor/lib*/libsensorlistener.so)
 		grep -q libshim_sensorndkbridge.so "$2" || "$PATCHELF" --add-needed "libshim_sensorndkbridge.so" "$2"
 		;;
+	vendor/bin/hw/rild | vendor/lib*/libsec-ril*.so)
+		"$PATCHELF" --replace-needed libril.so libril-samsung.so "$2"
+		;;
 	esac
 }
 

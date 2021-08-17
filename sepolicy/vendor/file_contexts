@@ -5,7 +5,8 @@
 /dev/fimg2d                                                 u:object_r:video_device:s0
 /dev/sec-nfc                                                u:object_r:nfc_device:s0
 /dev/goodix_fp                                              u:object_r:goodix_device:s0
-
+/dev/gnss_ipc                                               u:object_r:gps_device:s0
+/dev/scsc_h4_0                                              u:object_r:bt_device:s0
 /dev/cpuset(/.*)?                                           u:object_r:cgroup:s0
 
 # camera
@@ -52,51 +53,6 @@
 /data/camera(/.*)?                                          u:object_r:camera_data_file:s0
 
 ####################################
-# sysfs files
-
-# charger
-/sys/devices/battery/power_supply(/.*)                                                                u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-10/10-003d/s2mu004-charger/power_supply/s2mu004-charger(/.*)  u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-10/10-003d/s2mu004-charger/power_supply/otg(/.*)?             u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-10/10-003d/s2mu004-charger/power_supply/s2mu004-charger(/.*)? u:object_r:sysfs_charger:s0
-/sys/devices/platform/13830000\.i2c/i2c-9/9-003b/power_supply/s2mu004-fuelgauge(/.*)?                 u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-10/10-003d/s2mu004-muic/power_supply/muic-manager(/.*)?       u:object_r:sysfs_charger:s0
-/sys/devices/platform/13830000\.i2c/i2c-8/8-003b/power_supply/s2mu106-fuelgauge(/.*)?                 u:object_r:sysfs_charger:s0
-/sys/devices/platform/13830000\.i2c/i2c-8/8-003c/power_supply/s2mu106-usbpd(/.*)?                     u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-9/9-003d/s2mu106-powermeter/power_supply/s2mu106_pmeter(/.*)? u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-9/9-003d/s2mu106-muic/power_supply/muic-manager(/.*)?         u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-9/9-003d/s2mu106-charger/power_supply/otg(/.*)?               u:object_r:sysfs_charger:s0
-/sys/devices/platform/13840000\.i2c/i2c-9/9-003d/s2mu106-charger/power_supply/s2mu106-charger(/.*)?   u:object_r:sysfs_charger:s0
-
-# virtual
-/sys/devices/virtual(/.*)?                                  u:object_r:sysfs_virtual:s0
-
-# iio
-/sys/bus/iio/devices(/.*)?                                  u:object_r:sysfs_iio:s0
-
-# Backlight/Notification LED control
-/sys/class/backlight/panel/brightness                       u:object_r:sysfs_graphics:s0
-/sys/class/backlight/panel/max_brightness                   u:object_r:sysfs_graphics:s0
-
-# rild
-/sys/devices/virtual/misc/multipdp(/.*)                     u:object_r:sysfs_multipdp:s0
-
-# input
-/sys/devices/platform/gpio_keys/input/input12(/.*)?         u:object_r:sysfs_input:s0
-
-# modem
-/sys/module/modem_ctrl_ss310ap/parameters/ds_detect         u:object_r:sysfs_modem:s0
-
-# gps
-/sys/devices/soc0/machine                                   u:object_r:sysfs_sec_gps:s0
-/sys/devices/soc0/revision                                  u:object_r:sysfs_sec_gps:s0
-/dev/gnss_ipc                                               u:object_r:gps_device:s0
-
-# bt
-/dev/scsc_h4_0                                              u:object_r:bt_device:s0
-
-# ZRAM
-/sys/devices/virtual/block/zram0/mm_stat                    u:object_r:sysfs_zram:s0
 
 ### VENDOR
 /(vendor|system/vendor)/lib(64)?/hw/gralloc\.[a-z0-9]*\.so  u:object_r:same_process_hal_file:s0

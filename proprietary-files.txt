@@ -95,10 +95,6 @@ vendor/lib64/libexynosutils.so|cb42b6ded8fb488c74a6b40c428de36778e96d63
 vendor/lib64/libexynosv4l2.so|fb66b93ad867a47d48da44a804d6c4514cbb5713
 vendor/lib64/libion_exynos.so|bff127f0d989e6c756dd8cff40847ee5b7560447
 
-# Lights
-vendor/lib/hw/lights.universal7904.so
-vendor/lib64/hw/lights.universal7904.so
-
 # Media
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml

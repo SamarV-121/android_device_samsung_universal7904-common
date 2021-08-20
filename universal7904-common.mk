@@ -39,7 +39,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service
+    android.hardware.camera.provider@2.5-service \
+    Snap
 
 # DRM
 PRODUCT_PACKAGES += \

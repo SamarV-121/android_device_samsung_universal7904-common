@@ -96,7 +96,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 
 # Shim
 TARGET_LD_SHIM_LIBS += \
-    /system/bin/mediaserver|/vendor/lib/libstagefright_shim.so
+    /system/bin/mediaserver|/system/lib/libstagefright_shim.so
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor

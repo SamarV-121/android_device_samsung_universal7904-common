@@ -12,3 +12,6 @@ get_prop(hal_camera_default, exported_camera_prop)
 
 binder_call(hal_camera_default, system_server)
 binder_call(system_server, hal_camera_default)
+
+r_dir_file(hal_camera_default, sysfs_decon)
+set_prop(hal_camera_default, camera_prop)

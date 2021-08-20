@@ -1,0 +1,19 @@
+cc_library_shared {
+    name: "libshim_sensorndkbridge",
+
+    srcs: ["ASensorManager.cpp"],
+    shared_libs: [
+        "libbase",
+        "libsensorndkbridge",
+        "libutils",
+    ],
+
+    vendor: true,
+
+    include_dirs: [
+        "system/core/base/include",
+        "system/core/libutils/include",
+        "frameworks/hardware/interfaces/sensorservice/libsensorndkbridge",
+    ],
+
+}

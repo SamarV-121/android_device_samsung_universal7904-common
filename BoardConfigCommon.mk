@@ -84,7 +84,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
-include device/lineage/sepolicy/exynos/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 

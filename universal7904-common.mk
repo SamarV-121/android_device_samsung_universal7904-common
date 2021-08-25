@@ -50,10 +50,6 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.3-service.clearkey
 
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
-
 # Figerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.samsung
@@ -216,14 +212,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \

@@ -44,8 +44,6 @@
 # data files
 /data/vendor/nfc(/.*)?                                      u:object_r:nfc_vendor_data_file:s0
 
-/data/misc/radio(/.*)?                                      u:object_r:radio_data_file:s0
-
 # drm
 /data/vendor/mediadrm(/.*)?                                 u:object_r:mediadrm_data_file:s0
 

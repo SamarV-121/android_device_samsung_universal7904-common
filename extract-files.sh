@@ -36,9 +36,6 @@ function blob_fixup {
 	vendor/lib*/libsensorlistener.so)
 		grep -q libshim_sensorndkbridge.so "$2" || "$PATCHELF" --add-needed "libshim_sensorndkbridge.so" "$2"
 		;;
-	vendor/lib*/libwrappergps.so | vendor/lib/hw/audio.primary.exynos7904.so)
-		"$PATCHELF" --replace-needed "libvndsecril-client.so" "libsecril-client.so" "$2"
-		;;
 	esac
 }
 

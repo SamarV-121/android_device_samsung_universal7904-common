@@ -37,6 +37,18 @@ vendor/lib64/libsecaudioinfo.so
 vendor/lib64/soundfx/libaudioeffectoffload.so
 vendor/lib64/soundfx/libswdap.so
 
+# Camera
+vendor/lib/camera.device@1.0-impl.so
+vendor/lib/camera.device@3.2-impl.so
+vendor/lib/camera.device@3.3-impl.so
+vendor/lib/camera.device@3.4-impl.so
+vendor/lib/camera.device@3.5-impl.so
+vendor/lib64/camera.device@1.0-impl.so
+vendor/lib64/camera.device@3.2-impl.so
+vendor/lib64/camera.device@3.3-impl.so
+vendor/lib64/camera.device@3.4-impl.so
+vendor/lib64/camera.device@3.5-impl.so
+
 # DRM
 vendor/bin/hw/android.hardware.drm@1.2-service.widevine
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc
@@ -99,6 +111,7 @@ vendor/lib64/libion_exynos.so|bff127f0d989e6c756dd8cff40847ee5b7560447
 vendor/etc/media_codecs.xml
 vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
+vendor/firmware/mfc_fw.bin
 
 # Memtrack - from a40ser-user-11-RP1A.200720.012-A405FMPUU3CUC2-release-keys
 vendor/lib/hw/memtrack.exynos7904.so|bbd3a762209fd02e159bd501e6b7dd3e1dedd0a4

@@ -187,10 +187,6 @@ PRODUCT_PACKAGES += \
     fastbootd \
     init.recovery.exynos7904.rc
 
-# Renderscript
-PRODUCT_PACKAGES += \
-    android.hardware.renderscript@1.0-impl
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \

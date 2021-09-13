@@ -1,4 +1,4 @@
-# All blobs below are extracted from a40ser-user-11-RP1A.200720.012-A405FMPUU3CUC2-release-keys
+# All blobs below are extracted from a40xx-user-11-RP1A.200720.012-A405FNXXS4CUH4-release-keys
 
 # Audio
 vendor/bin/main_abox

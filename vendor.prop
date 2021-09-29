@@ -23,6 +23,10 @@ ro.telephony.default_network=9,9
 # Samsung Specific Properties
 ro.product_ship=true
 
+## SoC
+ro.soc.manufacturer=Samsung
+ro.soc.model=Exynos 7904
+
 ## Surfaceflinger
 debug.sf.latch_unsignaled=1
 debug.sf.disable_backpressure=1

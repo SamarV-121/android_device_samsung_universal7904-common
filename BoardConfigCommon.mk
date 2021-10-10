@@ -39,6 +39,7 @@ $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 # Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
 TARGET_SCREEN_DENSITY := 420
+TARGET_USES_VULKAN := true
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true

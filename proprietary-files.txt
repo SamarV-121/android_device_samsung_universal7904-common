@@ -242,3 +242,6 @@ vendor/etc/wifi/mx140_t_wlan_t.hcf
 vendor/etc/wifi/mx140_wlan.hcf
 vendor/etc/wifi/mx140_wlan_t.hcf
 vendor/etc/wifi/platform.txt
+
+# TMP HAX - compiled in android 11 environment
+vendor/lib64/libwifi-hal.so|6e3d4640ccd6257f20eb5a189117770fa4e52edc

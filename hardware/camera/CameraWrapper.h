@@ -15,9 +15,9 @@
  */
 
 #include <utils/String8.h>
+#include <utils/Mutex.h>
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
-#include <camera/Camera.h>
 #include <CameraParameters.h>
 
 using ::android::hardware::camera::common::V1_0::helper::CameraParameters;

@@ -24,6 +24,7 @@ cc_library_shared {
         "libhardware",
         "liblog",
         "libutils",
+        "libcamera_metadata",
         "libcutils",
         "android.hidl.token@1.0-utils",
         "android.hardware.graphics.bufferqueue@1.0",

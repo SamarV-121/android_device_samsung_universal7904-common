@@ -39,6 +39,9 @@ function blob_fixup {
 	vendor/bin/hw/rild | vendor/lib*/libsec-ril*.so)
 		"$PATCHELF" --replace-needed libril.so libril-samsung.so "$2"
 		;;
+	vendor/lib*/camera.device@*-impl.universal7904.so)
+		"$PATCHELF" --set-soname "$(basename "$2")" "$2"
+		;;
 	esac
 }
 

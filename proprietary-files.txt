@@ -36,16 +36,10 @@ vendor/lib64/soundfx/libaudioeffectoffload.so
 vendor/lib64/soundfx/libswdap.so
 
 # Camera
-vendor/lib/camera.device@1.0-impl.so
-vendor/lib/camera.device@3.2-impl.so
-vendor/lib/camera.device@3.3-impl.so
-vendor/lib/camera.device@3.4-impl.so
-vendor/lib/camera.device@3.5-impl.so
-vendor/lib64/camera.device@1.0-impl.so
-vendor/lib64/camera.device@3.2-impl.so
-vendor/lib64/camera.device@3.3-impl.so
-vendor/lib64/camera.device@3.4-impl.so
-vendor/lib64/camera.device@3.5-impl.so
+-vendor/lib64/camera.device@3.2-impl.so:vendor/lib64/camera.device@3.2-impl.universal7904.so
+-vendor/lib64/camera.device@3.3-impl.so:vendor/lib64/camera.device@3.3-impl.universal7904.so
+-vendor/lib64/camera.device@3.4-impl.so:vendor/lib64/camera.device@3.4-impl.universal7904.so
+-vendor/lib64/camera.device@3.5-impl.so:vendor/lib64/camera.device@3.5-impl.universal7904.so
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine

@@ -28,12 +28,12 @@
 
 static const std::vector<std::string> cpuSysfsPaths = {
     "/sys/devices/system/cpu/cpu0",
-    "/sys/devices/system/cpu/cpu4"
+    "/sys/devices/system/cpu/cpu6"
 };
 
 static const std::vector<std::string> cpuInteractivePaths = {
     "/sys/devices/system/cpu/cpu0/cpufreq/interactive",
-    "/sys/devices/system/cpu/cpu4/cpufreq/interactive"
+    "/sys/devices/system/cpu/cpu6/cpufreq/interactive"
 };
 
 #endif // SAMSUNG_POWER_H

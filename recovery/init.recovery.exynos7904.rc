@@ -6,6 +6,7 @@ on fs
     symlink /dev/block/platform/13500000.dwmmc0 /dev/block/bootdevice
 
     symlink /dev/block/bootdevice/by-name/BOOT /dev/block/bootdevice/by-name/boot
+    symlink /dev/block/bootdevice/by-name/RECOVERY /dev/block/bootdevice/by-name/recovery
     symlink /dev/block/bootdevice/by-name/SYSTEM /dev/block/bootdevice/by-name/system
     symlink /dev/block/bootdevice/by-name/VENDOR /dev/block/bootdevice/by-name/vendor
     symlink /dev/block/bootdevice/by-name/CACHE /dev/block/bootdevice/by-name/cache

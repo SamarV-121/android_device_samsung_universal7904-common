@@ -104,6 +104,10 @@ PRODUCT_PACKAGES += \
     ueventd.exynos7904.rc \
     wifi_sec.rc
 
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/uinput-sec-fp.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-sec-fp.kl
+
 # Light
 PRODUCT_PACKAGES += \
     android.hardware.light-service.samsung

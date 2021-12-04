@@ -150,7 +150,6 @@ vendor/lib64/omx/libOMX.Exynos.WMV.Decoder.so
 # RIL
 vendor/bin/cbd
 vendor/bin/hw/rild
-vendor/bin/secril_config_svc
 vendor/etc/init/init.vendor.onebinary.rc
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/plmn_delta.bin

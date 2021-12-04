@@ -201,6 +201,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor
 
+PRODUCT_PACKAGES += \
+    secril_config_svc
+
 # SamsungDoze
 PRODUCT_PACKAGES += \
     SamsungDoze

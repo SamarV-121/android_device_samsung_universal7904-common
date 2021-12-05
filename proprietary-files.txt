@@ -179,8 +179,6 @@ vendor/etc/yas_set.cfg
 -vendor/lib64/libyasalgo.so
 
 # Wifi
--vendor/bin/hw/macloader
--vendor/bin/wlbtd
 vendor/etc/init/wifi_slsi.rc
 vendor/etc/wifi/hydra_config.sdb
 vendor/etc/wifi/indoorchannel.info

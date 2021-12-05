@@ -1,3 +1,0 @@
-allow macloader sysfs_virtual:dir search;
-allow macloader wifi_vendor_data_file:dir create_dir_perms;
-allow macloader wifi_vendor_data_file:file create_file_perms;

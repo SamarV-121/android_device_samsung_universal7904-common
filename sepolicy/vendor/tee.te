@@ -3,3 +3,5 @@ allow tee efs_file:file rw_file_perms;
 allow tee mnt_vendor_file:dir search;
 
 dontaudit tee system_prop:property_service set;
+dontaudit tee shell_data_file:dir search;
+dontaudit tee unlabeled:dir search;

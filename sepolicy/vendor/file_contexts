@@ -59,7 +59,6 @@
 /(vendor|system/vendor)/bin/main_abox                       u:object_r:abox_exec:s0
 /(vendor|system/vendor)/bin/wlbtd                           u:object_r:wlbtd_exec:s0
 /(vendor|system/vendor)/bin/hw/gpsd                         u:object_r:gpsd_exec:s0
-/(vendor|system/vendor)/bin/hw/gps.sh                       u:object_r:gpsd_exec:s0
 /(vendor|system/vendor)/bin/hw/macloader                    u:object_r:macloader_exec:s0
 /(vendor|system/vendor)/bin/mcDriverDaemon                  u:object_r:tee_exec:s0
 

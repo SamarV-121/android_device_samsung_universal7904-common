@@ -26,3 +26,5 @@ allow rild hal_audio_default:file r_file_perms;
 add_hwservice(rild, hal_sec_radio_hwservice)
 add_hwservice(rild, hal_sec_radio_bridge_hwservice)
 add_hwservice(rild, hal_sec_radio_channel_hwservice)
+
+dontaudit rild default_prop:file read;

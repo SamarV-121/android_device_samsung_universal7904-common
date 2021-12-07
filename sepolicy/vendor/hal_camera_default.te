@@ -12,3 +12,5 @@ get_prop(hal_camera_default, exported_camera_prop)
 
 binder_call(hal_camera_default, system_server)
 binder_call(system_server, hal_camera_default)
+
+dontaudit hal_camera_default default_prop:file read;

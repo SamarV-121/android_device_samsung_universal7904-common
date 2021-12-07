@@ -70,7 +70,6 @@ vendor/bin/hw/gps.sh
 vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
 vendor/etc/gnss/ca.pem
 vendor/etc/gnss/gps.cfg
-vendor/etc/init/init.gps.rc
 vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
 vendor/lib/libwrappergps.so
 vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
@@ -155,7 +154,6 @@ vendor/bin/hw/rild
 vendor/bin/secril_config_svc
 vendor/etc/init/init.vendor.onebinary.rc
 vendor/etc/init/init.vendor.rilchip.rc
-vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
 vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin

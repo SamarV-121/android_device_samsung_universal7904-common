@@ -98,6 +98,8 @@ PRODUCT_PACKAGES += \
     fstab.enableswap \
     init.exynos7904.rc \
     init.exynos7904.usb.rc \
+    init.gps.rc \
+    init.vendor.rilcommon.rc \
     ueventd.exynos7904.rc \
     wifi_sec.rc
 

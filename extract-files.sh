@@ -42,6 +42,9 @@ function blob_fixup {
 	vendor/lib*/camera.device@*-impl.universal7904.so)
 		"$PATCHELF" --set-soname "$(basename "$2")" "$2"
 		;;
+	vendor/lib64/libwifi-hal-samsung.so)
+		"$PATCHELF" --set-soname libwifi-hal-samsung.so "$2"
+		;;
 	esac
 }
 

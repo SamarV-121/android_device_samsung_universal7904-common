@@ -263,7 +263,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service \
+    android.hardware.wifi@1.0-service.universal7904 \
     hostapd \
     WifiOverlay \
     wpa_supplicant

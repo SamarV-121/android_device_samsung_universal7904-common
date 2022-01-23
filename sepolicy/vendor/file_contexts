@@ -8,6 +8,7 @@
 /dev/gnss_ipc                                               u:object_r:gps_device:s0
 /dev/scsc_h4_0                                              u:object_r:bt_device:s0
 /dev/cpuset(/.*)?                                           u:object_r:cgroup:s0
+/dev/s5p-smem                                               u:object_r:drm_device:s0
 
 # camera
 /dev/m2m1shot_scaler0                                       u:object_r:m2m1shot_device:s0

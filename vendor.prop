@@ -1,11 +1,12 @@
 ## Audio
 ro.config.vc_call_vol_steps=7
+ro.config.alarm_vol_steps=15
 
 ## FRP
 # Disable invocation of oem_lock
 ro.frp.pst=/dev/block/persistent
 
-# fastbootd
+## Fastbootd
 ro.fastbootd.available=true
 
 ## OMX
@@ -34,5 +35,5 @@ ro.soc.model=Exynos 7904
 debug.sf.latch_unsignaled=1
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
-# Wifi direct
+## Wifi direct
 wifi.direct.interface=p2p0

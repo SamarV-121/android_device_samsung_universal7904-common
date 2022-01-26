@@ -1,5 +1,6 @@
 ## Audio
 ro.config.vc_call_vol_steps=7
+ro.config.ring_notification_vol_steps=15
 ro.config.alarm_vol_steps=15
 
 ## FRP

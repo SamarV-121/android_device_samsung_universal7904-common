@@ -18,6 +18,7 @@
 #define LOG_PARAMETERS
 
 #define LOG_TAG "Camera2Wrapper"
+#include <android/fdsan.h>
 #include <cutils/log.h>
 
 #include <unistd.h>
@@ -60,6 +61,7 @@ static camera_module_t *gVendorModule = 0;
 
 static int check_vendor_module()
 {
+    android_fdsan_set_error_level(ANDROID_FDSAN_ERROR_LEVEL_DISABLED);
     int rv = 0;
     ALOGV("%s", __FUNCTION__);
 

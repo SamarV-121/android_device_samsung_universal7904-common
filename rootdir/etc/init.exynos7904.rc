@@ -13,7 +13,7 @@ on init
 
     # ZRAM parameters
     write /proc/sys/vm/page-cluster 0
-    write /proc/sys/vm/swappiness 130
+    write /proc/sys/vm/swappiness 160
 
     ## SCSC WLAN
     # SD-755: Increase default socket rx buffer limit
@@ -227,8 +227,6 @@ on post-fs-data
     chown wifi root /mnt/vendor/efs/wifi/.mac.cob
     chmod 0664 /mnt/vendor/efs/wifi/.mac.cob
 
-    write /sys/module/scsc_mx/parameters/disable_recovery_handling 0
-
 # MST/NFC Switch
     chown system /dev/mst_ctrl
     chmod 0660 /dev/mst_ctrl
@@ -352,6 +350,14 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
     chmod 0660 /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack 20000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq 1144000
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load 89
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads "75 1248000:85"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay "19000 1248000:39000"
+    write /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration 40000
 
     chown system system /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_rate
     chmod 0660 /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_rate
@@ -377,6 +383,14 @@ on boot
     chmod 0660 /sys/devices/system/cpu/cpu6/cpufreq/interactive/boostpulse_duration
     chown system system /sys/devices/system/cpu/cpu6/cpufreq/interactive/io_is_busy
     chmod 0660 /sys/devices/system/cpu/cpu6/cpufreq/interactive/io_is_busy
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/hispeed_freq 1144000
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/target_loads 80
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/above_hispeed_delay "19000 1352000:39000"
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_rate 20000
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/timer_slack 20000
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/min_sample_time 40000
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/go_hispeed_load 89
+    write /sys/devices/system/cpu/cpu6/cpufreq/interactive/boostpulse_duration 40000
 
 # Mount cpuset group for cameraserver
     mkdir /dev/cpuset/cameraserver
@@ -399,8 +413,11 @@ on boot
     chmod 664 /dev/cpuset/system-background/cpus
     write /dev/cpuset/top-app/cpus 0-7
     write /dev/cpuset/foreground/cpus 0-7
-    write /dev/cpuset/background/cpus 0-7
-    write /dev/cpuset/system-background/cpus 0-7
+    write /dev/cpuset/background/cpus 0-1
+    write /dev/cpuset/system-background/cpus 0-3
+
+# For Prio Pinning
+    write /dev/cpuset/top-app/prio_pinning 1
 
 # For Selective boost
     write /dev/cpuset/top-app/selective_boost 1

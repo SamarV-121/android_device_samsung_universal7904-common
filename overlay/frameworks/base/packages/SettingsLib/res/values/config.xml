@@ -4,5 +4,6 @@
  * SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <!-- Threshold in milli watts from which a charger is rated as "fast" -->
     <integer name="config_chargingFastThreshold">10800000</integer>
 </resources>

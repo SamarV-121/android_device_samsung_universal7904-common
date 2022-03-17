@@ -47,6 +47,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
+# DAP
+PRODUCT_PACKAGES += \
+    SamsungDAP
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \

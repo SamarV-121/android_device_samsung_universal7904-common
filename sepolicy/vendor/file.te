@@ -20,7 +20,6 @@ type proc_reset_reason, fs_type, proc_type;
 type proc_swapiness, fs_type, proc_type;
 
 # data types
-type display_vendor_data_file, file_type, data_file_type;
 type fingerprintd_vendor_data_file, data_file_type, file_type;
 type mediadrm_data_file, file_type, data_file_type;
 type nfc_vendor_data_file, file_type, data_file_type;

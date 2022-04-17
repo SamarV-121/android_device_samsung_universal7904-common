@@ -39,3 +39,13 @@ cc_library_shared {
     ],
     include_dirs: ["system/media/private/camera/include"],
 }
+
+cc_library_shared {
+    name: "libshim_audioparams",
+    srcs: ["audioparams.cpp"],
+    shared_libs: [
+        "libbase",
+        "libcutils",
+    ],
+    vendor: true,
+}

@@ -622,6 +622,9 @@ service charger /system/bin/charger
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
+on property:ro.boot.product.model=SM-M205FN
+    setprop ro.boot.product.hardware.sku NFC
+
 # Start NFC on supported variants
 service nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service.samsung
     override

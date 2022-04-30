@@ -1,0 +1,47 @@
+prebuilt_etc {
+    name: "fstab.enableswap",
+    src: "etc/fstab.enableswap",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.exynos7904.rc",
+    src: "etc/init.exynos7904.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.exynos7904.usb.rc",
+    src: "etc/init.exynos7904.usb.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.gps.rc",
+    src: "etc/init.gps.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.vendor.rilcommon.rc",
+    src: "etc/init.vendor.rilcommon.rc",
+    relative_install_path: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.exynos7904.rc",
+    src: "etc/ueventd.rc",
+    filename: "ueventd.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "wifi_sec.rc",
+    src: "etc/wifi_sec.rc",
+    relative_install_path: "init",
+    vendor: true,
+}

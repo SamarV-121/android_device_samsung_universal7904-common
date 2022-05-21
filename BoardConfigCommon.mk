@@ -74,10 +74,6 @@ TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 
-# Releasetools
-TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_universal7904
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
-
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 

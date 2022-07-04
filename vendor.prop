@@ -16,6 +16,7 @@ ro.vendor.cscsupported=1
 
 ## OpenGLES
 ro.opengles.version=196610
+debug.renderengine.backend=threaded
 
 ## RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so

@@ -2,6 +2,9 @@
 ro.config.vc_call_vol_steps=7
 ro.config.alarm_vol_steps=15
 
+## Dalvik
+dalvik.vm.lockprof.threshold=500
+
 ## FRP
 # Disable invocation of oem_lock
 ro.frp.pst=/dev/block/persistent

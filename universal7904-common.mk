@@ -2,7 +2,7 @@
 $(call inherit-product, vendor/samsung/universal7904-common/universal7904-common-vendor.mk)
 
 # Dalvik
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
 # Audio
 TARGET_EXCLUDES_AUDIOFX := true

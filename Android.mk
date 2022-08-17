@@ -23,5 +23,14 @@ $(EGL_64_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /vendor/lib64/egl/libGLES_mali.so $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(EGL_32_SYMLINKS) $(EGL_64_SYMLINKS)
+LIBUTILS32_SERVICES := android.hardware.graphics.composer@2.1-service
+LIBUTILS32_FILES := $(addprefix $(TARGET_OUT_VENDOR)/bin/hw/,$(LIBUTILS32_SERVICES))
+LIBUTILS32_SYMLINK := $(TARGET_OUT_VENDOR)/lib64/libuti32.so
+$(LIBUTILS32_SYMLINK): $(LOCAL_INSTALLED_MODULE) $(LIBUTILS32_FILES)
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /vendor/lib64/libutils-v32.so $@
+	$(hide) sed -i 's/libutils\.so/libuti32.so/g' $(LIBUTILS32_FILES)
+
+ALL_DEFAULT_INSTALLED_MODULES += $(EGL_32_SYMLINKS) $(EGL_64_SYMLINKS) $(LIBUTILS32_SYMLINK)
 endif

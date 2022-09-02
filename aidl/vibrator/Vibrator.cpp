@@ -285,16 +285,16 @@ uint32_t Vibrator::effectToMs(Effect effect, ndk::ScopedAStatus* status) {
     *status = ndk::ScopedAStatus::ok();
     switch (effect) {
         case Effect::CLICK:
-            return 10;
+            return 40;
         case Effect::DOUBLE_CLICK:
-            return 15;
+            return 50;
         case Effect::TICK:
         case Effect::TEXTURE_TICK:
         case Effect::THUD:
         case Effect::POP:
-            return 5;
+            return 20;
         case Effect::HEAVY_CLICK:
-            return 10;
+            return 60;
         case Effect::RINGTONE_1:
         case Effect::RINGTONE_2:
         case Effect::RINGTONE_3:

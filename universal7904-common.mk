@@ -89,9 +89,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    libhidltransport \
+    android.hidl.allocator@1.0.vendor \
     libhidltransport.vendor \
-    libhwbinder \
     libhwbinder.vendor \
     libunwindstack.vendor
 

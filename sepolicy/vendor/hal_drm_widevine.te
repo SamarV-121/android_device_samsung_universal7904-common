@@ -1,20 +1,8 @@
-vndbinder_use(hal_drm_widevine)
-
-allow hal_drm_widevine mediacodec:fd use;
-allow hal_drm_widevine { appdomain -isolated_app }:fd use;
-
-allow hal_drm_widevine hal_allocator_server:fd use;
-
-allow hal_drm_widevine mediadrm_data_file:dir create_dir_perms;
-allow hal_drm_widevine mediadrm_data_file:file create_file_perms;
-allow hal_drm_widevine vendor_data_file:dir create_dir_perms;
-allow hal_drm_widevine vendor_data_file:file create_file_perms;
-
+allow hal_drm_widevine drm_device:chr_file { ioctl read write open };
+allow hal_drm_widevine efs_file:dir search;
+allow hal_drm_widevine efs_file:file { getattr open read };
+allow hal_drm_widevine mediadrm_data_file:dir { getattr search };
+allow hal_drm_widevine mediadrm_data_file:file { read getattr open write };
 allow hal_drm_widevine mnt_vendor_file:dir search;
-
-allow hal_drm_widevine cpk_efs_file:file r_file_perms;
-r_dir_file(hal_drm_widevine, efs_file)
-
-allow hal_drm_widevine drm_device:chr_file rw_file_perms;
 
 dontaudit hal_drm_widevine media_data_file:dir search;

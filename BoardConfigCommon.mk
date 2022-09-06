@@ -80,7 +80,6 @@ ENABLE_VENDOR_RIL_SERVICE := true
 # Sepolicy
 ifneq ($(LINEAGE_BUILD),)
 include device/lineage/sepolicy/exynos/sepolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor-lineage
 endif
 include device/samsung_slsi/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor

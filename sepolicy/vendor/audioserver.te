@@ -1,0 +1,2 @@
+# ro.vendor.qti.va_aosp.support
+dontaudit audioserver vendor_default_prop:file read;

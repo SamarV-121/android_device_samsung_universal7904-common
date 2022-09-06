@@ -1,15 +1,11 @@
 typeattribute vendor_init data_between_core_and_vendor_violators;
 
-set_prop(vendor_init, tee_prop);
-get_prop(vendor_init, vendor_radio_prop);
+set_prop(vendor_init, tee_prop)
+get_prop(vendor_init, vendor_radio_prop)
 
-allow vendor_init proc_swapiness:file rw_file_perms; 
-allow vendor_init cgroup:file getattr;
+allow vendor_init camera_data_file:dir getattr;
+allow vendor_init proc_swapiness:file write;
+allow vendor_init system_data_file:dir { ioctl open read };
 allow vendor_init tmpfs:dir { add_name write };
-allow vendor_init wifi_data_file:dir { getattr setattr };
+allow vendor_init wifi_data_file:dir { getattr search setattr };
 allow vendor_init wpa_socket:dir getattr;
-allow vendor_init wifi_data_file:dir search;
-# mkdir /data/hostapd
-allow vendor_init system_data_file:dir create_dir_perms;
-# mkdir /data/camera/*
-allow vendor_init camera_data_file:dir create_dir_perms;

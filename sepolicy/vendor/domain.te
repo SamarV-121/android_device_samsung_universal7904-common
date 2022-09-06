@@ -1,19 +1,5 @@
-# domain.te
+r_dir_file(domain, debugfs_ion)
+r_dir_file(domain, debugfs_mali)
+r_dir_file(domain, debugfs_mali_mem)
 
-# /sys/kernel/debug/mali
-allow domain debugfs_mali:dir search;
-
-# /sys/kernel/debug/mali/mem
-allow domain debugfs_mali_mem:dir search;
-
-# /sys/kernel/debug/dma_buf
-allow domain debugfs_ion_dma:dir search;
-
-# /sys/kernel/debug/ion
-allow domain debugfs_ion:dir search;
-
-# /sys/kernel/debug/tracing/trace_marker
-allow domain debugfs_trace_marker:file getattr;
-
-# /efs
-dontaudit domain efs_file:lnk_file read;
+dontaudit domain efs_file:lnk_file r_file_perms;

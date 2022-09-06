@@ -1,4 +1,3 @@
-####################################
 # Devices
 /dev/mali[0-9]*                                             u:object_r:gpu_device:s0
 /dev/umts_ipc0                                              u:object_r:radio_device:s0
@@ -7,41 +6,22 @@
 /dev/goodix_fp                                              u:object_r:goodix_device:s0
 /dev/gnss_ipc                                               u:object_r:gps_device:s0
 /dev/scsc_h4_0                                              u:object_r:bt_device:s0
-/dev/cpuset(/.*)?                                           u:object_r:cgroup:s0
 /dev/s5p-smem                                               u:object_r:drm_device:s0
-
-# camera
 /dev/m2m1shot_scaler0                                       u:object_r:m2m1shot_device:s0
 
-# usb
-/dev/android_ssusbcon(/.*)?                                 u:object_r:usb_device:s0
-/dev/mtp_usb*                                               u:object_r:mtp_device:s0
-/dev/usb(/.*)?                                              u:object_r:usb_device:s0
-
-# adbroot and storaged
-/dev/stune(/.*)?                                            u:object_r:cgroup:s0
-
-# blocks
+# Blocks
 /dev/block/zram0                                            u:object_r:swap_block_device:s0
+/dev/block/platform/13500000.dwmmc0/by-name/OMR             u:object_r:metadata_block_device:s0
 
-####################################
 # efs
 /mnt/vendor/cpefs(/.*)?                                     u:object_r:efs_file:s0
 
-####################################
 # data files
 /data/vendor/nfc(/.*)?                                      u:object_r:nfc_vendor_data_file:s0
-
-# drm
 /data/vendor/mediadrm(/.*)?                                 u:object_r:mediadrm_data_file:s0
-
-# camera
 /data/camera(/.*)?                                          u:object_r:camera_data_file:s0
 
-####################################
-
-### VENDOR
-/(vendor|system/vendor)/bin/main_abox                       u:object_r:abox_exec:s0
-
+# Vendor
+/(vendor|system/vendor)/bin/main_abox                                                                  u:object_r:abox_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.camera\.provider@[0-9]\.[0-9]-service\.universal7904 u:object_r:hal_camera_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.universal7904 u:object_r:hal_vibrator_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.vibrator-service\.universal7904                      u:object_r:hal_vibrator_default_exec:s0

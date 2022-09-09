@@ -105,10 +105,6 @@ vendor/etc/media_codecs_performance.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/firmware/mfc_fw.bin
 
-# Memtrack
--vendor/lib/hw/memtrack.exynos7904.so
--vendor/lib64/hw/memtrack.exynos7904.so
-
 # OMX
 -vendor/lib/libExynosOMX_Core.so
 -vendor/lib/libExynosOMX_Resourcemanager.so

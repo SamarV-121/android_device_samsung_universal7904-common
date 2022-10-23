@@ -21,7 +21,6 @@ namespace vibrator {
 
 static std::map<Effect, int> CP_TRIGGER_EFFECTS {
     { Effect::CLICK, 10 },
-    { Effect::DOUBLE_CLICK, 14 },
     { Effect::HEAVY_CLICK, 23 },
     { Effect::TEXTURE_TICK, 50 },
     { Effect::TICK, 50 }
@@ -138,8 +137,8 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength strength, con
 }
 
 ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
-    *_aidl_return = {Effect::CLICK, Effect::DOUBLE_CLICK, Effect::HEAVY_CLICK,
-                     Effect::TICK, Effect::TEXTURE_TICK, Effect::THUD, Effect::POP,
+    *_aidl_return = {Effect::CLICK, Effect::HEAVY_CLICK, Effect::TICK,
+                     Effect::TEXTURE_TICK, Effect::THUD, Effect::POP,
                      Effect::RINGTONE_1, Effect::RINGTONE_2, Effect::RINGTONE_3,
                      Effect::RINGTONE_4, Effect::RINGTONE_5, Effect::RINGTONE_6,
                      Effect::RINGTONE_7, Effect::RINGTONE_7, Effect::RINGTONE_8,
@@ -279,8 +278,6 @@ uint32_t Vibrator::effectToMs(Effect effect, ndk::ScopedAStatus* status) {
     switch (effect) {
         case Effect::CLICK:
             return 40;
-        case Effect::DOUBLE_CLICK:
-            return 50;
         case Effect::TICK:
         case Effect::TEXTURE_TICK:
         case Effect::THUD:

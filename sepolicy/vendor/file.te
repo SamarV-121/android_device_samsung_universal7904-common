@@ -1,3 +1,6 @@
+# File types
+type factory_file, file_type;
+
 # debugfs types
 type debugfs_mali, fs_type, debugfs_type;
 type debugfs_mali_mem, fs_type, debugfs_type;

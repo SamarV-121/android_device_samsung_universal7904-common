@@ -2,6 +2,7 @@ allow hal_drm_widevine mediacodec:fd use;
 allow hal_drm_widevine drm_device:chr_file { ioctl read write open };
 allow hal_drm_widevine efs_file:dir search;
 allow hal_drm_widevine efs_file:file { getattr open read };
+allow hal_drm_widevine factory_file:lnk_file read;
 allow hal_drm_widevine mediadrm_data_file:dir create_dir_perms;
 allow hal_drm_widevine mediadrm_data_file:file create_file_perms;
 allow hal_drm_widevine mnt_vendor_file:dir search;

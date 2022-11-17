@@ -2,8 +2,8 @@ genfscon debugfs /ion/                            u:object_r:debugfs_ion:s0
 genfscon debugfs /mali/mem/                       u:object_r:debugfs_mali_mem:s0
 genfscon debugfs /mali/                           u:object_r:debugfs_mali:s0
 genfscon proc /sys/vm/swappiness                  u:object_r:proc_swapiness:s0
-genfscon sysfs /class/backlight/panel/brightness                                  u:object_r:sysfs_graphics:s0
-genfscon sysfs /class/backlight/panel/max_brightness                              u:object_r:sysfs_graphics:s0
+genfscon sysfs /class/backlight/panel/brightness                                  u:object_r:sysfs_brightness:s0
+genfscon sysfs /class/backlight/panel/max_brightness                              u:object_r:sysfs_brightness:s0
 genfscon sysfs /class/input/input1                                                u:object_r:sysfs_input:s0
 genfscon sysfs /class/video4linux                                                 u:object_r:sysfs_v4l:s0
 genfscon sysfs /devices/platform/10000.mif_pdata/sim/ds_detect                    u:object_r:sysfs_sim_writable:s0
@@ -34,7 +34,7 @@ genfscon sysfs /devices/platform/14410000.fimc_is_sensor/video4linux            
 genfscon sysfs /devices/platform/14430000.fimc_is_sensor/video4linux              u:object_r:sysfs_v4l_fimc:s0
 genfscon sysfs /devices/platform/14440000.fimc_is/video4linux                     u:object_r:sysfs_v4l_fimc:s0
 genfscon sysfs /devices/platform/14860000.decon_f                                 u:object_r:sysfs_decon:s0
-genfscon sysfs /devices/platform/14870000.dsim/backlight/panel                    u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/14870000.dsim/backlight/panel                    u:object_r:sysfs_brightness:s0
 genfscon sysfs /devices/platform/14a50000.abox/service                            u:object_r:sysfs_abox_writable:s0
 genfscon sysfs /devices/platform/battery/power_supply/ac/type                     u:object_r:sysfs_battery_writable:s0
 genfscon sysfs /devices/platform/battery/power_supply/battery/batt_capacity_max   u:object_r:sysfs_battery_writable:s0

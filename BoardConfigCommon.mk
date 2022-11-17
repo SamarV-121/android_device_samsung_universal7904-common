@@ -5,9 +5,10 @@ BOARD_VENDOR := samsung
 # Platform
 TARGET_BOARD_PLATFORM := universal7904
 TARGET_SOC := exynos7904
-TARGET_BOOTLOADER_BOARD_NAME := universal7904
+TARGET_BOOTLOADER_BOARD_NAME := exynos7904
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+include hardware/samsung_slsi-linaro/config/BoardConfig7904.mk
 
 # Architecture
 TARGET_ARCH := arm64

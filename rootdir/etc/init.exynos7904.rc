@@ -8,6 +8,9 @@ on early-init
 on init
     start watchdogd
 
+    # Charger
+    chown system system /sys/class/power_supply/battery/batt_slate_mode
+
     # Fastcharge
     chown system radio /sys/class/sec/switch/afc_disable
 

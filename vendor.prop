@@ -60,5 +60,10 @@ ro.soc.model=Exynos 7904
 debug.sf.latch_unsignaled=1
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
+## Vibrator HAL
+ro.vendor.vibrator_hal.click_duration=50
+ro.vendor.vibrator_hal.tick_duration=45
+ro.vendor.vibrator_hal.texture_tick_duration=30
+
 ## Wifi direct
 wifi.direct.interface=p2p0

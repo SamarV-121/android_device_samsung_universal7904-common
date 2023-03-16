@@ -265,7 +265,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.universal7904
+    android.hardware.vibrator-service.samsung
 
 # VNDK
 PRODUCT_PACKAGES += \

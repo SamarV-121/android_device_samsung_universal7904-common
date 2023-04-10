@@ -594,6 +594,7 @@ service abox /vendor/bin/main_abox 14a50000.abox /data/log/abox
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /system/bin/watchdogd 10 20
+    user root
     class core
     seclabel u:r:watchdogd:s0
 

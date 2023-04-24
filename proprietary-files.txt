@@ -1,4 +1,4 @@
-# All blobs below are extracted from A307GTVJS4CVG1
+# All blobs below are extracted from A405FNXXS4CWB5
 
 # Audio
 -vendor/bin/main_abox

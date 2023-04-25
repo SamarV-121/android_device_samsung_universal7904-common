@@ -1,0 +1,15 @@
+//
+// Copyright (C) 2022 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_shared {
+    name: "libshim_audioparams",
+    srcs: ["audioparams.cpp"],
+    shared_libs: [
+        "libbase",
+        "libcutils",
+    ],
+    vendor: true,
+}

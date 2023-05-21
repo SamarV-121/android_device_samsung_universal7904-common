@@ -87,6 +87,9 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 
+# Vibrator
+$(call soong_config_set,samsungVibratorVars,duration_amplitude,true)
+
 # VNDK
 BOARD_VNDK_VERSION := current
 

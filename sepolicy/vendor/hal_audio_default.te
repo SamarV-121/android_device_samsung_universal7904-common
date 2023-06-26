@@ -6,3 +6,5 @@ allow hal_audio_default imei_efs_file:file { getattr open read };
 allow hal_audio_default mnt_vendor_file:dir search;
 allow hal_audio_default system_suspend_hwservice:hwservice_manager find;
 allow hal_audio_default rild:unix_stream_socket connectto;
+
+dontaudit hal_audio_default hal_system_suspend_service:service_manager find;

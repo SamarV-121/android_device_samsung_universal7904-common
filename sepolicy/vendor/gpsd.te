@@ -8,3 +8,4 @@ allow gpsd sysfs_sec_gps:file { getattr open read };
 allow gpsd sysfs_wake_lock:file { open write };
 
 dontaudit gpsd system_data_file:dir search;
+dontaudit gpsd self:capability2 block_suspend;

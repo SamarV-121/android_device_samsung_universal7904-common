@@ -8,3 +8,6 @@ ro.fastbootd.available=true
 # LMKD
 ro.lmk.use_minfree_levels=true
 ro.lmk.use_psi=false
+
+# Samsung Specific Properties
+ro.product_ship=true

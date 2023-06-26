@@ -1,1 +1,2 @@
 allow cbd sysfs_info:file { open read };
+allow cbd self:capability2 block_suspend;

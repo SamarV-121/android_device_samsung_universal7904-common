@@ -76,7 +76,6 @@ on post-fs-data
     # Setup Wi-Fi permissions
     mkdir /data/misc/wifi 0770 wifi system
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
-	mkdir /vendor/etc/wifi 0770 system system
 	mkdir /data/hostapd 0770 system wifi
 
 # Permissions for audio
@@ -130,7 +129,6 @@ on post-fs-data
 
 # Permissions Camera
     mkdir /data/vendor/camera 0770 cameraserver system
-    mkdir /data/misc/camera 0770 cameraserver cameraserver
     chown system radio /sys/class/camera/rear/rear_camfw
     chown system radio /sys/class/camera/rear/rear_camfw_full
     chown system radio /sys/class/camera/rear/rear_checkfw_user

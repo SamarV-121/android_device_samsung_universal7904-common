@@ -1,5 +1,6 @@
 # Dex
 dalvik.vm.dex2oat64.enabled=true
+pm.dexopt.shared=quicken
 
 # Fastbootd
 ro.fastbootd.available=true

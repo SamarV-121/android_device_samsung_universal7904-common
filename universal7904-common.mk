@@ -101,6 +101,12 @@ PRODUCT_PACKAGES += \
     libGrallocWrapper \
     libion_exynos
 
+PRODUCT_PACKAGES += \
+    libGLES_mali_vulkan_symlink \
+    libGLES_mali_libOpenCL_symlink \
+    libGLES_mali_libOpenCL.1_symlink \
+    libGLES_mali_libOpenCL.1.1_symlink
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \

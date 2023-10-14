@@ -93,6 +93,9 @@ include device/lineage/sepolicy/exynos/sepolicy.mk
 endif
 include device/samsung_slsi/sepolicy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+ifeq ($(filter teegris, $(BOARD_SEPOLICY_TEE_FLAVOR)),)
+BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/mobicore
+endif
 
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor

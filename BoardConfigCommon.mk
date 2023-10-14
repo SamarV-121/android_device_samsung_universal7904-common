@@ -53,6 +53,10 @@ TARGET_KERNEL_ADDITIONAL_FLAGS := HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-l
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
+ifeq ($(filter teegris, $(BOARD_SEPOLICY_TEE_FLAVOR)),)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest_mobicore.xml
+endif
+
 ODM_MANIFEST_SKUS += NFC
 ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
 

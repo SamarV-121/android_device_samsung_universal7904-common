@@ -1,4 +1,4 @@
-# All blobs below are extracted from A405FNXXS4CWB5
+# All blobs below are extracted from A405FNXXU4CWC3
 
 # Audio
 -vendor/bin/main_abox
@@ -14,7 +14,7 @@ vendor/firmware/calliope_dram.bin
 vendor/firmware/calliope_sram.bin
 -vendor/lib/hw/audio.primary.exynos7904.so
 -vendor/lib/libSamsungPostProcessConvertor.so
--vendor/lib/lib_SamsungRec_07001.so
+-vendor/lib/lib_SamsungRec_07010.so
 -vendor/lib/lib_SoundAlive_SRC384_ver320.so
 -vendor/lib/lib_soundaliveresampler.so
 -vendor/lib/libaudio_soundtrigger.so

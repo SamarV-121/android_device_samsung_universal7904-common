@@ -3,3 +3,4 @@ allow kernel device:chr_file { getattr setattr unlink create };
 allow kernel device:dir create_dir_perms;
 allow kernel self:capability { mknod sys_rawio };
 allow kernel sysfs_sec_key:dir search;
+allow kernel sysfs_sec_key:file { getattr open read };

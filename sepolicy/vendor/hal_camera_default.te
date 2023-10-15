@@ -5,5 +5,6 @@ allow hal_camera_default hal_graphics_composer_default:fd use;
 allow hal_camera_default system_server:binder call;
 allow hal_camera_default sysfs_camera:dir search;
 allow hal_camera_default sysfs_camera:file rw_file_perms;
+allow hal_camera_default vendor_factory_prop:file { getattr open read };
 
 dontaudit hal_camera_default default_prop:file r_file_perms;

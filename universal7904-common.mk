@@ -236,10 +236,6 @@ PRODUCT_PACKAGES += \
     libshim_audioparams \
     libshim_sensorndkbridge
 
-# Skip Mount
-PRODUCT_PACKAGES += \
-    gsi_skip_mount.cfg
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \

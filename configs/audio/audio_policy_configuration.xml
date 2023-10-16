@@ -12,6 +12,7 @@
                 <item>Built-In Mic</item>
                 <item>Built-In Back Mic</item>
                 <item>Voice Call Mic</item>
+                <item>FM Mic</item>
             </attachedDevices>
 
             <defaultOutputDevice>Speaker</defaultOutputDevice>

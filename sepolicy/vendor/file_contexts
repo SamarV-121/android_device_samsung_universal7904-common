@@ -8,6 +8,7 @@
 /dev/scsc_h4_0                                              u:object_r:bt_device:s0
 /dev/s5p-smem                                               u:object_r:drm_device:s0
 /dev/m2m1shot_scaler0                                       u:object_r:m2m1shot_device:s0
+/dev/radio0                                                 u:object_r:fm_device:s0
 
 # Blocks
 /dev/block/zram0                                            u:object_r:swap_block_device:s0

@@ -1,30 +1,35 @@
 # Devices
-/dev/mali[0-9]*                                             u:object_r:gpu_device:s0
-/dev/umts_ipc0                                              u:object_r:radio_device:s0
-/dev/fimg2d                                                 u:object_r:video_device:s0
-/dev/sec-nfc                                                u:object_r:nfc_device:s0
-/dev/goodix_fp                                              u:object_r:goodix_device:s0
-/dev/gnss_ipc                                               u:object_r:gps_device:s0
-/dev/scsc_h4_0                                              u:object_r:bt_device:s0
-/dev/s5p-smem                                               u:object_r:drm_device:s0
-/dev/m2m1shot_scaler0                                       u:object_r:m2m1shot_device:s0
-/dev/radio0                                                 u:object_r:fm_device:s0
+/dev/mali[0-9]*                                               u:object_r:gpu_device:s0
+/dev/umts_ipc0                                                u:object_r:radio_device:s0
+/dev/fimg2d                                                   u:object_r:video_device:s0
+/dev/sec-nfc                                                  u:object_r:nfc_device:s0
+/dev/goodix_fp                                                u:object_r:goodix_device:s0
+/dev/gnss_ipc                                                 u:object_r:gps_device:s0
+/dev/scsc_h4_0                                                u:object_r:bt_device:s0
+/dev/s5p-smem                                                 u:object_r:drm_device:s0
+/dev/m2m1shot_scaler0                                         u:object_r:m2m1shot_device:s0
+/dev/radio0                                                   u:object_r:fm_device:s0
 
 # Blocks
-/dev/block/zram0                                            u:object_r:swap_block_device:s0
-/dev/block/platform/13500000.dwmmc0/by-name/OMR             u:object_r:metadata_block_device:s0
+/dev/block/zram0                                              u:object_r:swap_block_device:s0
+/dev/block/platform/13500000.dwmmc0/by-name/OMR               u:object_r:metadata_block_device:s0
+/dev/block/platform/13500000.dwmmc0/by-name/dtb               u:object_r:dtb_block_device:s0
+/dev/block/platform/13500000.dwmmc0/by-name/DTBO              u:object_r:dtbo_block_device:s0
+/dev/block/platform/13500000.dwmmc0/by-name/(system|SYSTEM)   u:object_r:system_block_device:s0
+/dev/block/platform/13500000.dwmmc0/by-name/(vendor|VENDOR)   u:object_r:vendor_block_device:s0
+/dev/block/platform/13500000.dwmmc0/by-name/(product|PRODUCT) u:object_r:product_block_device:s0
 
 # efs
-/mnt/vendor/cpefs(/.*)?                                     u:object_r:efs_file:s0
+/mnt/vendor/cpefs(/.*)?                                       u:object_r:efs_file:s0
 
 # factory
-/factory(/.*)?                                              u:object_r:factory_file:s0
+/factory(/.*)?                                                u:object_r:factory_file:s0
 
 # data files
-/data/vendor/nfc(/.*)?                                      u:object_r:nfc_vendor_data_file:s0
-/data/vendor/mediadrm(/.*)?                                 u:object_r:mediadrm_data_file:s0
-/data/camera(/.*)?                                          u:object_r:camera_data_file:s0
-/data/hostapd(/.*)?                                         u:object_r:hostapd_data_file:s0
+/data/vendor/nfc(/.*)?                                        u:object_r:nfc_vendor_data_file:s0
+/data/vendor/mediadrm(/.*)?                                   u:object_r:mediadrm_data_file:s0
+/data/camera(/.*)?                                            u:object_r:camera_data_file:s0
+/data/hostapd(/.*)?                                           u:object_r:hostapd_data_file:s0
 
 # Vendor
 /(vendor|system/vendor)/bin/main_abox                                                                  u:object_r:abox_exec:s0

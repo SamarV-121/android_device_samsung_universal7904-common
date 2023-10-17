@@ -1,0 +1,6 @@
+allow fastbootd {
+    dtb_block_device
+    system_block_device
+    vendor_block_device
+    product_block_device
+}:blk_file rw_file_perms;

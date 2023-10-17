@@ -12,3 +12,8 @@ type drm_device, dev_type;
 
 # /dev/radio0
 type fm_device, dev_type;
+
+# Block devices
+type dtb_block_device, dev_type;
+type vendor_block_device, dev_type;
+type product_block_device, dev_type;

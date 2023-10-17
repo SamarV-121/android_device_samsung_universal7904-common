@@ -8,7 +8,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 TARGET_EXCLUDES_AUDIOFX := true
 
 PRODUCT_PACKAGES += \
-    android.hardware.audio@7.1-impl \
+    android.hardware.audio@7.0-impl \
     android.hardware.audio.service \
     android.hardware.audio.effect@7.0-impl \
     libtinycompress \

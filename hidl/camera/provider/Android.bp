@@ -13,9 +13,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+soong_config_module_type {
+    name: "exynos7904_model",
+    module_type: "cc_defaults",
+    config_namespace: "exynos7904CameraVars",
+    value_variables: ["exynos7904_model"],
+    properties: ["cppflags"],
+}
+
+exynos7904_model {
+    name: "exynos7904_model_defaults",
+    soong_config_variables: {
+        exynos7904_model: {
+            cppflags: ["-DEXYNOS7904_MODEL_%s"],
+        },
+    },
+}
+
 cc_binary {
     name: "android.hardware.camera.provider@2.5-service.universal7904",
-    defaults: ["hidl_defaults"],
+    defaults: [
+        "hidl_defaults",
+        "exynos7904_model_defaults",
+    ],
     compile_multilib: "32",
     proprietary: true,
     relative_install_path: "hw",

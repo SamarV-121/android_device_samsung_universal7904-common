@@ -27,6 +27,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
+# Camera
+$(call soong_config_set,exynos7904CameraVars,exynos7904_model,$(TARGET_DEVICE))
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 

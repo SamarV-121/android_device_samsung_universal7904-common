@@ -26,6 +26,11 @@ using ::android::OK;
 const int kMaxCameraIdLen = 16;
 
 SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() {
+#if defined(EXYNOS7904_MODEL_a40)
+    // ID 50 is an ultrawide camera
+    mExtraIDs.push_back(50);
+#endif
+
     if (!mInitFailed) {
         for (int i : mExtraIDs) {
             struct camera_info info;

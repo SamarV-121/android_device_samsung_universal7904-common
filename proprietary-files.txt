@@ -21,6 +21,7 @@ vendor/firmware/calliope_sram.bin
 -vendor/lib/libfloatingfeature.so
 -vendor/lib/libprofileparamstorage.so
 -vendor/lib/libsamsungDiamondVoice.so
+-vendor/lib/librecordalive.so
 -vendor/lib/libsecaudiocoreutils.so
 -vendor/lib/libsecaudioinfo.so
 -vendor/lib/soundfx/libaudioeffectoffload.so
@@ -33,9 +34,6 @@ vendor/firmware/calliope_sram.bin
 -vendor/lib64/libsecaudioinfo.so
 -vendor/lib64/soundfx/libaudioeffectoffload.so
 -vendor/lib64/soundfx/libswdap.so
-
-# Audio - from A405FNXXS4CUH4
--vendor/lib/librecordalive.so|19ff35887cb416015cf39a5e364d9d3176be9b5a
 
 # DRM
 -vendor/bin/hw/android.hardware.drm@1.3-service.widevine

@@ -1,3 +1,6 @@
 allow mediacodec sysfs_v4l_mfc:dir search;
 allow mediacodec sysfs_v4l_mfc:file { getattr open read };
 allow mediacodec sysfs_v4l:dir search;
+allow mediacodec m2m1shot_device:chr_file rw_file_perms;
+
+hal_client_domain(mediacodec, hal_power)

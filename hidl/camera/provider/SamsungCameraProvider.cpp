@@ -29,6 +29,9 @@ SamsungCameraProvider::SamsungCameraProvider() : LegacyCameraProviderImpl_2_5() 
 #if defined(EXYNOS7904_MODEL_a40)
     // ID 50 is an ultrawide camera
     mExtraIDs.push_back(50);
+#elif defined(EXYNOS7904_MODEL_m20lte)
+    // ID 52 is an ultrawide camera
+    mExtraIDs.push_back(52);
 #endif
 
     if (!mInitFailed) {

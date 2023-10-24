@@ -1,0 +1,25 @@
+cc_binary_host {
+    name: "dtbhtoolExynos.universal7904",
+    shared_libs: [
+        "libdtbimg.universal7904",
+    ],
+    static_libs: [
+        "libfdt",
+    ],
+    srcs: [
+        "mkdtbimg.c",
+    ],
+    local_include_dirs: ["libdtbimg"],
+}
+
+cc_library {
+    name: "libdtbimg.universal7904",
+    host_supported: true,
+    srcs: [
+        "dtbimg.c",
+    ],
+    static_libs: [
+        "libfdt",
+    ],
+    local_include_dirs: ["libdtbimg"],
+}

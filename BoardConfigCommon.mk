@@ -35,6 +35,7 @@ BOARD_HAVE_BLUETOOTH_SLSI := true
 $(call soong_config_set,exynos7904CameraVars,exynos7904_model,$(TARGET_DEVICE))
 
 # Display
+BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
 TARGET_SCREEN_DENSITY := 420
 
 # Filesystem

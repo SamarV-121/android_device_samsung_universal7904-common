@@ -30,9 +30,6 @@ debug.fdsan=warn_once
 # Disable invocation of oem_lock
 ro.frp.pst=/dev/block/persistent
 
-## Fastbootd
-ro.fastbootd.available=true
-
 ## OMX
 # Set csc support in OMX
 # If not set or set to 0, OMX will only use BT.601 colorspace.

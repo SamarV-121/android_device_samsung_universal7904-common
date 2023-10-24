@@ -1,0 +1,1 @@
+../../../../hardware/samsung/dtbhtool/samsung_dtbh.h

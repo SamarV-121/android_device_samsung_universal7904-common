@@ -67,6 +67,7 @@ genfscon sysfs /devices/virtual/input/input9/poll_delay                         
 genfscon sysfs /devices/virtual/input/input11/enable                              u:object_r:sysfs_input_writable:s0
 genfscon sysfs /devices/virtual/input/input11/poll_delay                          u:object_r:sysfs_input_writable:s0
 genfscon sysfs /devices/virtual/misc/multipdp                                     u:object_r:sysfs_multipdp:s0
+genfscon sysfs /devices/virtual/sec/hall_ic                                       u:object_r:sysfs_sec_key:s0
 genfscon sysfs /devices/virtual/sensors/sensor_dev/flush                          u:object_r:sysfs_sensor_writable:s0
 genfscon sysfs /firmware/devicetree/base/model_info-system_rev                    u:object_r:sysfs_info:s0
 genfscon sysfs /kernel/gpu/gpu_max_clock                                          u:object_r:sysfs_gpu_writable:s0

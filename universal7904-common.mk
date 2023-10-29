@@ -41,7 +41,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider@2.5-service_64.universal7904
+    android.hardware.camera.provider@2.5-service_64.samsung
 
 PRODUCT_PACKAGES += \
     libhwjpeg

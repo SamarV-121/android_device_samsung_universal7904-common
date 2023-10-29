@@ -32,7 +32,11 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 BOARD_HAVE_BLUETOOTH_SLSI := true
 
 # Camera
-$(call soong_config_set,exynos7904CameraVars,exynos7904_model,$(TARGET_DEVICE))
+ifeq ($(TARGET_DEVICE),a40)
+SOONG_CONFIG_NAMESPACES += samsungCameraVars
+SOONG_CONFIG_samsungCameraVars += extra_ids
+SOONG_CONFIG_samsungCameraVars_extra_ids := 50
+endif
 
 # Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1

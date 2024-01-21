@@ -33,6 +33,9 @@ ro.frp.pst=/dev/block/persistent
 ## Graphics
 ro.hardware.egl=mali
 
+## Fingerprint
+ro.vendor.fingerprint.supports_gestures=true
+
 ## OMX
 # Set csc support in OMX
 # If not set or set to 0, OMX will only use BT.601 colorspace.

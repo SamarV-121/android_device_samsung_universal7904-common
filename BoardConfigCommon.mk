@@ -34,6 +34,7 @@ SOONG_CONFIG_NAMESPACES += samsungCameraVars
 SOONG_CONFIG_samsungCameraVars += extra_ids
 SOONG_CONFIG_samsungCameraVars_extra_ids := 50
 endif
+$(call soong_config_set,samsungCameraVars,usage_64bit,true)
 
 # Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1

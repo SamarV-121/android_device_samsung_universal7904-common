@@ -20,6 +20,30 @@
         "target_path": "hardware/samsung_slsi/libbt"
     },
     {
+        "repository": "android_hardware_samsung_slsi-linaro_config",
+        "target_path": "hardware/samsung_slsi-linaro/config"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_exynos",
+        "target_path": "hardware/samsung_slsi-linaro/exynos"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_exynos5",
+        "target_path": "hardware/samsung_slsi-linaro/exynos5"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_graphics",
+        "target_path": "hardware/samsung_slsi-linaro/graphics"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_interfaces",
+        "target_path": "hardware/samsung_slsi-linaro/interfaces"
+    },
+    {
+        "repository": "android_hardware_samsung_slsi-linaro_openmax",
+        "target_path": "hardware/samsung_slsi-linaro/openmax"
+    },
+    {
         "repository": "android_hardware_samsung_slsi_scsc_wifibt_wifi_hal",
         "target_path": "hardware/samsung_slsi/scsc_wifibt/wifi_hal"
     },

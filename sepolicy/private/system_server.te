@@ -1,0 +1,2 @@
+allow system_server cgroup:dir create_dir_perms;
+allow system_server cgroup:file setattr;

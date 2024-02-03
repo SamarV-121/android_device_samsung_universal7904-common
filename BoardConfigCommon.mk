@@ -99,6 +99,7 @@ ifneq ($(LINEAGE_BUILD),)
 include device/lineage/sepolicy/exynos/sepolicy.mk
 endif
 include device/samsung_slsi/sepolicy/sepolicy.mk
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 ifeq ($(filter teegris, $(BOARD_SEPOLICY_TEE_FLAVOR)),)
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/mobicore

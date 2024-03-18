@@ -65,7 +65,7 @@ vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
 
 # Graphics
 -vendor/lib/egl/libGLES_mali.so
--vendor/lib64/egl/libGLES_mali.so
+-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.universal7904.so,vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1
 
 # Media
 vendor/etc/media_codecs.xml

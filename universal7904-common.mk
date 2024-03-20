@@ -4,9 +4,6 @@ $(call inherit-product, vendor/samsung/universal7904-common/universal7904-common
 # Dalvik
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
 
-# APEX
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Soong namespaces
 $(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
 

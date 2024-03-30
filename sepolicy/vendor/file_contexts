@@ -28,8 +28,6 @@
 # data files
 /data/vendor/nfc(/.*)?                                        u:object_r:nfc_vendor_data_file:s0
 /data/vendor/mediadrm(/.*)?                                   u:object_r:mediadrm_data_file:s0
-/data/camera(/.*)?                                            u:object_r:camera_data_file:s0
-/data/hostapd(/.*)?                                           u:object_r:hostapd_data_file:s0
 
 # Vendor
 /(vendor|system/vendor)/bin/main_abox                                                                     u:object_r:abox_exec:s0

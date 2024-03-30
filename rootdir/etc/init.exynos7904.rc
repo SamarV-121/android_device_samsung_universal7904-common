@@ -71,12 +71,6 @@ on post-fs-data
 # Gatekeeper data
     mkdir /data/vendor/gk 0771 system system
 
-## SCSC WLAN
-    # Setup Wi-Fi permissions
-    mkdir /data/misc/wifi 0770 wifi system
-    mkdir /data/misc/wifi/sockets 0770 wifi wifi
-	mkdir /data/hostapd 0770 system wifi
-
 # Permissions for audio
     chown system radio /sys/class/audio/earjack/select_jack
     chown system radio /sys/class/audio/earjack/key_state

@@ -44,6 +44,9 @@ ro.vendor.cscsupported=1
 ## OpenGLES
 ro.opengles.version=196610
 
+## Power HAL
+vendor.powerhal.disp.idle_support=false
+
 ## RIL
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 vendor.sec.rild.libpath2=/vendor/lib64/libsec-ril-dsds.so

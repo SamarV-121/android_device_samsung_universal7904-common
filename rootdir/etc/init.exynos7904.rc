@@ -260,6 +260,7 @@ on post-fs-data
     chmod 0644 /dev/freezer/olaf/freezer.state
 
 on boot
+    setprop vendor.powerhal.init 1
 
 	setprop wifi.interface wlan0
 

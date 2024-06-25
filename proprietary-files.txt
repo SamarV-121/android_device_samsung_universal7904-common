@@ -26,8 +26,8 @@ vendor/firmware/calliope_sram.bin
 -vendor/lib/libsecaudioinfo.so
 -vendor/lib/soundfx/libaudioeffectoffload.so
 -vendor/lib/soundfx/libswdap.so
--vendor/lib/vndk/libaudioroute.so;MODULE=libaudioroute.universal7904
--vendor/lib/vndk/libtinyalsa.so;MODULE=libtinyalsa.universal7904
+-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.universal7904.so;MODULE=libaudioroute.universal7904
+-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.universal7904.so;MODULE=libtinyalsa.universal7904
 -vendor/lib64/libfloatingfeature.so
 -vendor/lib64/libprofileparamstorage.so
 -vendor/lib64/libsecaudiocoreutils.so

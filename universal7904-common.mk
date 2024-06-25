@@ -14,6 +14,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.service \
     android.hardware.audio.effect@7.0-impl \
+    libprocessgroup.vendor \
     libtinycompress \
     audio.r_submix.default \
     audio.usb.default
@@ -47,6 +48,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
 
 PRODUCT_PACKAGES += \
+    libexpat.vendor \
     libhwjpeg
 
 # Charger
@@ -239,6 +241,8 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
+    libnetutils.vendor \
+    libsqlite.vendor \
     vendor.samsung.hardware.radio@2.1.vendor
 
 PRODUCT_PACKAGES += \

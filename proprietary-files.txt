@@ -89,8 +89,6 @@ vendor/etc/plmn_se13.bin
 -vendor/lib/libsemnativecarrierfeature.so
 -vendor/lib/libsecril-client.so;MODULE=libsecril-client.universal7904
 -vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
--vendor/lib/vendor.samsung.hardware.radio@2.0.so
--vendor/lib/vendor.samsung.hardware.radio@2.1.so
 -vendor/lib64/libengmode_client.so
 -vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
 -vendor/lib64/libsecnativefeature.so
@@ -101,8 +99,6 @@ vendor/etc/plmn_se13.bin
 -vendor/lib64/libvkmanager_vendor.so
 -vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
 -vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio@2.1.so
 
 # Sensors
 vendor/etc/yas_set.cfg

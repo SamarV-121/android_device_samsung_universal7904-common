@@ -103,6 +103,9 @@ ifeq ($(filter teegris, $(BOARD_SEPOLICY_TEE_FLAVOR)),)
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/mobicore
 endif
 
+# UFFD GC
+OVERRIDE_ENABLE_UFFD_GC := false
+
 # Vendor
 TARGET_COPY_OUT_VENDOR := vendor
 

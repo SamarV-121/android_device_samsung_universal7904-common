@@ -265,6 +265,7 @@ PRODUCT_PACKAGES += \
 # Shims
 PRODUCT_PACKAGES += \
     libcamera_metadata_helper \
+    libcrypto_shim.vendor \
     libshim_audioparams \
     libshim_sensorndkbridge
 

@@ -32,6 +32,7 @@ ro.frp.pst=/dev/block/persistent
 
 ## Graphics
 ro.hardware.egl=mali
+ro.vendor.ddk.set.afbc=1
 
 ## Fingerprint
 ro.vendor.fingerprint.supports_gestures=true

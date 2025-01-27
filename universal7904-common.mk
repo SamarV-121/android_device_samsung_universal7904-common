@@ -96,7 +96,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
-    gralloc.exynos7904 \
+    gralloc.universal7904 \
     libGrallocWrapper \
     libion_exynos
 
@@ -271,7 +271,8 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/samsung
+    hardware/samsung \
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile

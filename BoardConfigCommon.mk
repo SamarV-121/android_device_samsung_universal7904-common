@@ -25,9 +25,6 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
-# Bluetooth
-BOARD_HAVE_BLUETOOTH_SLSI := true
-
 # Camera
 ifeq ($(TARGET_DEVICE),a40)
 SOONG_CONFIG_NAMESPACES += samsungCameraVars

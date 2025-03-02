@@ -274,7 +274,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/samsung \
-    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3
+    hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
+    hardware/samsung_slsi/libbt
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile

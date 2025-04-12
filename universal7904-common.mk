@@ -14,8 +14,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@7.0-impl \
     android.hardware.audio.service \
     android.hardware.audio.effect@7.0-impl \
-    libprocessgroup.vendor \
-    libtinycompress \
     audio.r_submix.default \
     audio.usb.default
 
@@ -48,7 +46,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
 
 PRODUCT_PACKAGES += \
-    libexpat.vendor \
     libhwjpeg
 
 # Charger
@@ -61,8 +58,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm-service.clearkey \
-    android.hardware.drm@1.3.vendor
+    android.hardware.drm-service.clearkey
 
 # FastCharge
 PRODUCT_PACKAGES += \
@@ -84,11 +80,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
 
-# GPS
-PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.gnss@2.1.vendor
-
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
@@ -98,21 +89,12 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     android.hardware.composer.hwc3-service.slsi \
-    gralloc.universal7904 \
-    libGrallocWrapper \
-    libion_exynos
+    gralloc.universal7904
 
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health-service.samsung \
     android.hardware.health-service.samsung-recovery
-
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.allocator@1.0.vendor \
-    libhidltransport.vendor \
-    libhwbinder.vendor \
-    libunwindstack.vendor
 
 # Init
 PRODUCT_PACKAGES += \
@@ -236,15 +218,6 @@ PRODUCT_PACKAGES += \
     fastbootd \
     init.recovery.exynos7904.rc
 
-# RIL
-PRODUCT_PACKAGES += \
-    android.hardware.radio@1.4.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    libnetutils.vendor \
-    libsqlite.vendor \
-    vendor.samsung.hardware.radio@2.1.vendor
-
 PRODUCT_PACKAGES += \
     secril_config_svc
 
@@ -259,15 +232,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.samsung \
-    android.hardware.sensors@1.0-service \
-    libsensorndkbridge
-
-# Shims
-PRODUCT_PACKAGES += \
-    libcamera_metadata_helper \
-    libcrypto_shim.vendor \
-    libshim_audioparams \
-    libshim_sensorndkbridge
+    android.hardware.sensors@1.0-service
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \

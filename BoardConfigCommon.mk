@@ -27,9 +27,7 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # Camera
 ifeq ($(TARGET_DEVICE),a40)
-SOONG_CONFIG_NAMESPACES += samsungCameraVars
-SOONG_CONFIG_samsungCameraVars += extra_ids
-SOONG_CONFIG_samsungCameraVars_extra_ids := 50
+$(call soong_config_set,samsungCameraVars,extra_ids,50)
 endif
 $(call soong_config_set,samsungCameraVars,usage_64bit,true)
 

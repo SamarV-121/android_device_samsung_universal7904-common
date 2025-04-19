@@ -1,7 +1,6 @@
 # All blobs below are extracted from A405FNXXU4CWC3
 
 # Audio
--vendor/bin/main_abox
 vendor/etc/audio_board_info.xml
 vendor/etc/dolby/dax-default.xml
 vendor/etc/floating_feature.xml

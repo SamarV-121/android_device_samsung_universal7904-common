@@ -61,11 +61,6 @@ on post-fs-data
 # Log data folder
     mkdir /data/vendor 0771 root system
     mkdir /data/vendor/log 0771 root system
-    mkdir /data/log/abox 0771 audioserver system
-
-#dump Abox permission
-    chmod 777 data/vendor/log/abox
-
     setprop vold.post_fs_data_done 1
 
 # Gatekeeper data
@@ -101,13 +96,6 @@ on post-fs-data
     chmod 0440 /sys/class/nxp/tfa_log/count_overxmax
     chmod 0440 /sys/class/nxp/tfa_log/data_maxt
     chmod 0440 /sys/class/nxp/tfa_log/count_overtmax
-
-# Change permission for A-Box firmware logs file & GPR dump
-    chown audioserver system /sys/kernel/debug/abox/log-00
-    chown audioserver system /sys/devices/platform/14a50000.abox/14a50000.abox:abox_debug@0/gpr
-    chown audioserver system /sys/devices/platform/14a50000.abox/14a50000.abox:abox_debug@0/calliope_sram
-    chown audioserver system /sys/devices/platform/14a50000.abox/14a50000.abox:abox_debug@0/calliope_dram
-    chown audioserver system /sys/devices/platform/14a50000.abox/14a50000.abox:abox_debug@0/calliope_iva
 
 # FM Radio
     chown system audio /dev/radio0
@@ -577,12 +565,6 @@ on property:sys.boot_completed=1
 
 #load ecd firmware
     write /proc/ecd/load_firmware 1
-
-# Abox FailSafe
-service abox /vendor/bin/main_abox 14a50000.abox /data/log/abox
-   class late_start
-   user audioserver
-   group system
 
 # Set watchdog timer to 30 seconds and pet it every 10 seconds to get a 20 second margin
 service watchdogd /system/bin/watchdogd 10 20

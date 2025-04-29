@@ -65,12 +65,6 @@ ODM_MANIFEST_NFC_FILES := $(COMMON_PATH)/manifest_nfc.xml
 # hwservicemanager
 $(call soong_config_set,hwservicemanager,need_no_selinux_hack,true)
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/batt_slate_mode
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_ENABLED := 0
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_DISABLED := 1
-TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 

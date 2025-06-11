@@ -85,13 +85,13 @@ vendor/etc/plmn_se13.bin
 -vendor/lib/libril.so:vendor/lib/libril-samsung.so
 -vendor/lib/libsecnativefeature.so
 -vendor/lib/libsemnativecarrierfeature.so
--vendor/lib/libsecril-client.so;MODULE=libsecril-client.universal7904
+-vendor/lib/libsecril-client.so
 -vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 -vendor/lib64/libengmode_client.so
 -vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
 -vendor/lib64/libsecnativefeature.so
 -vendor/lib64/libsemnativecarrierfeature.so
--vendor/lib64/libsecril-client.so;MODULE=libsecril-client.universal7904
+-vendor/lib64/libsecril-client.so
 -vendor/lib64/libsec-ril-dsds.so
 -vendor/lib64/libsec-ril.so
 -vendor/lib64/libvkmanager_vendor.so

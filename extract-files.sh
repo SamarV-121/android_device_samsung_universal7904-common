@@ -55,6 +55,15 @@ function blob_fixup {
 		"$PATCHELF" --replace-needed "libprotobuf-cpp-lite-3.9.1.so" "libprotobuf-cpp-full-3.9.1.so" "$2"
 		grep -q libcrypto_shim.so "$2" || "$PATCHELF" --add-needed libcrypto_shim.so "$2"
 		;;
+	vendor/lib/libtinyalsa.universal7904.so)
+		"$PATCHELF" --set-soname libtinyalsa.universal7904.so "$2"
+		;;
+	vendor/lib/libaudioroute.universal7904.so)
+		"$PATCHELF" --set-soname libaudioroute.universal7904.so "$2"
+		;;
+	vendor/lib*/libril-samsung.so)
+		"$PATCHELF" --set-soname libril-samsung.so "$2"
+		;;
 	esac
 }
 

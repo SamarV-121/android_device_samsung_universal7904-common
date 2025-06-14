@@ -22,8 +22,9 @@ source "${HELPER}"
 
 function blob_fixup {
 	case "$1" in
-	vendor/lib*/libhifills.so)
+	vendor/lib64/libhifills.so)
 		grep -q libunwindstack.so "$2" || "$PATCHELF" --add-needed "libunwindstack.so" "$2"
+		grep -q libdemangle.so "$2" || "$PATCHELF" --add-needed "libdemangle.so" "$2"
 		;;
 	vendor/lib*/hw/camera.exynos7904.so)
 		"$PATCHELF" --replace-needed "libcamera_client.so" "libcamera_metadata_helper.so" "$2"

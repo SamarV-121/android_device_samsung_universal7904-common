@@ -65,6 +65,9 @@ function blob_fixup {
 	vendor/lib*/libril-samsung.so)
 		"$PATCHELF" --set-soname libril-samsung.so "$2"
 		;;
+	vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so)
+		"$PATCHELF" --set-soname vendor.samsung.hardware.gnss@2.0-impl.so "$2"
+		;;
 	esac
 }
 

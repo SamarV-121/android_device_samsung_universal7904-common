@@ -57,10 +57,6 @@ function blob_fixup {
 		grep -q libcrypto_shim.so "$2" || "$PATCHELF" --add-needed libcrypto_shim.so "$2"
 		;;
 	esac
-
-	if [[ $2 == *.so ]]; then
-	    "$PATCHELF" --set-soname "$(basename "$2")" "$2"
-	fi
 }
 
 # Default to sanitizing the vendor folder before extraction

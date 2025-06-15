@@ -25,8 +25,8 @@ vendor/firmware/calliope_sram.bin
 -vendor/lib/libsecaudioinfo.so
 -vendor/lib/soundfx/libaudioeffectoffload.so
 -vendor/lib/soundfx/libswdap.so
--vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.universal7904.so;MODULE=libaudioroute.universal7904
--vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.universal7904.so;MODULE=libtinyalsa.universal7904
+-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.universal7904.so;MODULE=libaudioroute.universal7904;FIX_SONAME
+-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.universal7904.so;MODULE=libtinyalsa.universal7904;FIX_SONAME
 vendor/lib64/libfloatingfeature.so
 
 # DRM
@@ -48,8 +48,8 @@ vendor/etc/gnss/ca.pem
 vendor/etc/gnss/gps.cfg
 vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
 -vendor/lib/libwrappergps.so
--vendor/lib64/hw/android.hardware.gnss@2.1-impl.so
--vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so
+-vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;DISABLE_CHECKELF
+-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so;FIX_SONAME
 -vendor/lib64/libwrappergps.so
 -vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
 
@@ -73,13 +73,13 @@ vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 -vendor/lib/libaudio-ril.so
--vendor/lib/libril.so:vendor/lib/libril-samsung.so
+-vendor/lib/libril.so:vendor/lib/libril-samsung.so;FIX_SONAME
 -vendor/lib/libsecnativefeature.so
 -vendor/lib/libsemnativecarrierfeature.so
 -vendor/lib/libsecril-client.so
 -vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
 -vendor/lib64/libengmode_client.so
--vendor/lib64/libril.so:vendor/lib64/libril-samsung.so
+-vendor/lib64/libril.so:vendor/lib64/libril-samsung.so;FIX_SONAME
 -vendor/lib64/libsecnativefeature.so
 -vendor/lib64/libsemnativecarrierfeature.so
 -vendor/lib64/libsecril-client.so

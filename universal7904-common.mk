@@ -45,7 +45,8 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung
+    android.hardware.camera.provider-service.samsung \
+    libpower.vendor
 
 PRODUCT_PACKAGES += \
     libexpat.vendor \

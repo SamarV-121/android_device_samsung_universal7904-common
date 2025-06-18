@@ -11,51 +11,51 @@ vendor/firmware/AP_AUDIO_SLSI.bin
 vendor/firmware/Tfa9896.cnt
 vendor/firmware/calliope_dram.bin
 vendor/firmware/calliope_sram.bin
--vendor/lib/hw/audio.primary.exynos7904.so
--vendor/lib/libSamsungPostProcessConvertor.so
--vendor/lib/lib_SamsungRec_07010.so
--vendor/lib/lib_SoundAlive_SRC384_ver320.so
--vendor/lib/lib_soundaliveresampler.so
--vendor/lib/libaudio_soundtrigger.so
--vendor/lib/libfloatingfeature.so
--vendor/lib/libprofileparamstorage.so
--vendor/lib/libsamsungDiamondVoice.so
--vendor/lib/librecordalive.so
--vendor/lib/libsecaudiocoreutils.so
--vendor/lib/libsecaudioinfo.so
--vendor/lib/soundfx/libaudioeffectoffload.so
--vendor/lib/soundfx/libswdap.so
--vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.universal7904.so;MODULE=libaudioroute.universal7904;FIX_SONAME
--vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.universal7904.so;MODULE=libtinyalsa.universal7904;FIX_SONAME
-vendor/lib64/libfloatingfeature.so
+-vendor/lib/hw/audio.primary.exynos7904.so;DISABLE_DEPS
+-vendor/lib/libSamsungPostProcessConvertor.so;DISABLE_DEPS
+-vendor/lib/lib_SamsungRec_07010.so;DISABLE_DEPS
+-vendor/lib/lib_SoundAlive_SRC384_ver320.so;DISABLE_DEPS
+-vendor/lib/lib_soundaliveresampler.so;DISABLE_DEPS
+-vendor/lib/libaudio_soundtrigger.so;DISABLE_DEPS
+-vendor/lib/libfloatingfeature.so;DISABLE_DEPS
+-vendor/lib/libprofileparamstorage.so;DISABLE_DEPS
+-vendor/lib/libsamsungDiamondVoice.so;DISABLE_DEPS
+-vendor/lib/librecordalive.so;DISABLE_DEPS
+-vendor/lib/libsecaudiocoreutils.so;DISABLE_DEPS;DISABLE_DEPS
+-vendor/lib/libsecaudioinfo.so;DISABLE_DEPS
+-vendor/lib/soundfx/libaudioeffectoffload.so;DISABLE_DEPS
+-vendor/lib/soundfx/libswdap.so;DISABLE_DEPS
+-vendor/lib/vndk/libaudioroute.so:vendor/lib/libaudioroute.universal7904.so;MODULE=libaudioroute.universal7904;FIX_SONAME;DISABLE_DEPS
+-vendor/lib/vndk/libtinyalsa.so:vendor/lib/libtinyalsa.universal7904.so;MODULE=libtinyalsa.universal7904;FIX_SONAME;DISABLE_DEPS
+vendor/lib64/libfloatingfeature.so;DISABLE_DEPS
 
 # DRM
--vendor/bin/hw/android.hardware.drm@1.3-service.widevine
+-vendor/bin/hw/android.hardware.drm@1.3-service.widevine;DISABLE_DEPS
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc
--vendor/lib/libwvhidl.so
--vendor/lib/mediadrm/libwvdrmengine.so
+-vendor/lib/libwvhidl.so;DISABLE_DEPS
+-vendor/lib/mediadrm/libwvdrmengine.so;DISABLE_DEPS
 
 # Fingerprint
--vendor/lib64/libegis_fp_normal_sensor_test.so
--vendor/lib64/libgf_in_system_lib.so
--vendor/lib64/libqfp_sensortest.so
--vendor/lib64/libsynaFpSensorTestNwd.so;DISABLE_CHECKELF
+-vendor/lib64/libegis_fp_normal_sensor_test.so;DISABLE_DEPS
+-vendor/lib64/libgf_in_system_lib.so;DISABLE_DEPS
+-vendor/lib64/libqfp_sensortest.so;DISABLE_DEPS
+-vendor/lib64/libsynaFpSensorTestNwd.so;DISABLE_DEPS
 
 # GPS
--vendor/bin/hw/gpsd
--vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service
+-vendor/bin/hw/gpsd;DISABLE_DEPS
+-vendor/bin/hw/vendor.samsung.hardware.gnss@2.0-service;DISABLE_DEPS
 vendor/etc/gnss/ca.pem
 vendor/etc/gnss/gps.cfg
 vendor/etc/init/vendor.samsung.hardware.gnss@2.0-service.rc
--vendor/lib/libwrappergps.so
--vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;DISABLE_CHECKELF
--vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so;FIX_SONAME
--vendor/lib64/libwrappergps.so
--vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
+-vendor/lib/libwrappergps.so;DISABLE_DEPS
+-vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;DISABLE_DEPS
+-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.0-impl.so;FIX_SONAME;DISABLE_DEPS
+-vendor/lib64/libwrappergps.so;DISABLE_DEPS
+-vendor/lib64/vendor.samsung.hardware.gnss@2.0.so;DISABLE_DEPS
 
 # Graphics
--vendor/lib/egl/libGLES_mali.so
--vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.universal7904.so,vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1
+-vendor/lib/egl/libGLES_mali.so;DISABLE_DEPS
+-vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.universal7904.so,vendor/lib64/libOpenCL.so,vendor/lib64/libOpenCL.so.1,vendor/lib64/libOpenCL.so.1.1;DISABLE_DEPS
 
 # Media
 vendor/etc/media_codecs_performance.xml
@@ -63,8 +63,8 @@ vendor/etc/media_profiles_V1_0.xml
 vendor/firmware/mfc_fw.bin
 
 # RIL
--vendor/bin/cbd
--vendor/bin/hw/rild
+-vendor/bin/cbd;DISABLE_DEPS
+-vendor/bin/hw/rild;DISABLE_DEPS
 vendor/etc/init/init.vendor.onebinary.rc
 vendor/etc/init/init.vendor.rilchip.rc
 vendor/etc/plmn_delta.bin
@@ -72,27 +72,27 @@ vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
--vendor/lib/libaudio-ril.so
--vendor/lib/libril.so:vendor/lib/libril-samsung.so;FIX_SONAME
--vendor/lib/libsecnativefeature.so
--vendor/lib/libsemnativecarrierfeature.so
--vendor/lib/libsecril-client.so
--vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so
--vendor/lib64/libengmode_client.so
--vendor/lib64/libril.so:vendor/lib64/libril-samsung.so;FIX_SONAME
--vendor/lib64/libsecnativefeature.so
--vendor/lib64/libsemnativecarrierfeature.so
--vendor/lib64/libsecril-client.so
--vendor/lib64/libsec-ril-dsds.so
--vendor/lib64/libsec-ril.so
--vendor/lib64/libvkmanager_vendor.so
--vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so
--vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so
+-vendor/lib/libaudio-ril.so;DISABLE_DEPS
+-vendor/lib/libril.so:vendor/lib/libril-samsung.so;FIX_SONAME;DISABLE_DEPS
+-vendor/lib/libsecnativefeature.so;DISABLE_DEPS
+-vendor/lib/libsemnativecarrierfeature.so;DISABLE_DEPS
+-vendor/lib/libsecril-client.so;DISABLE_DEPS
+-vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so;DISABLE_DEPS
+-vendor/lib64/libengmode_client.so;DISABLE_DEPS
+-vendor/lib64/libril.so:vendor/lib64/libril-samsung.so;FIX_SONAME;DISABLE_DEPS
+-vendor/lib64/libsecnativefeature.so;DISABLE_DEPS
+-vendor/lib64/libsemnativecarrierfeature.so;DISABLE_DEPS
+-vendor/lib64/libsecril-client.so;DISABLE_DEPS
+-vendor/lib64/libsec-ril-dsds.so;DISABLE_DEPS
+-vendor/lib64/libsec-ril.so;DISABLE_DEPS
+-vendor/lib64/libvkmanager_vendor.so;DISABLE_DEPS
+-vendor/lib64/vendor.samsung.hardware.radio.bridge@2.0.so;DISABLE_DEPS
+-vendor/lib64/vendor.samsung.hardware.radio.channel@2.0.so;DISABLE_DEPS
 
 # Sensors
 vendor/etc/yas_set.cfg
--vendor/lib/libyasalgo.so
--vendor/lib64/libyasalgo.so
+-vendor/lib/libyasalgo.so;DISABLE_DEPS
+-vendor/lib64/libyasalgo.so;DISABLE_DEPS
 
 # Wifi
 vendor/etc/init/wifi_slsi.rc
